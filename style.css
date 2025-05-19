@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #050507; /* Slightly darker base */
+    color: #e0e0e0; /* Light gray text */
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 90%; /* Slightly wider for better spacing */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px; /* Increased vertical padding */
+}
+
+h1, h2, h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700; /* Slightly less bold for cleaner look */
+    margin-bottom: 1.2rem;
+    color: #ffffff; /* White headings */
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 900; /* Keep h1 very bold */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+    /* Gradient Border */
+    border-bottom: 3px solid transparent;
+    background: linear-gradient(to right, #007bff, #00aaff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    border-image: linear-gradient(to right, #007bff, #00aaff) 1;
+
+    padding-bottom: 0.8rem;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+a {
+    /* Gradient Text for links */
+    background: linear-gradient(to right, #007bff, #00aaff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8; /* Slightly fade on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+li::before {
+    content: '\2023'; /* Use a bullet point character • */
+    position: absolute;
+    left: 0;
+    /* Gradient Bullet */
+    background: linear-gradient(to bottom, #007bff, #00aaff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+li:hover::before {
+    transform: scale(1.2); /* Subtle scale on hover */
+}
+
+/* Hero Section - Simplified */
+.hero {
+    /* Basic styling for the hero section */
+    background-color: #0a0a0c; /* Fallback or base color */
+    text-align: center;
+    padding: 80px 0 60px; /* Adjusted padding */
+    position: relative;
+    border-bottom: 1px solid #1a1a1e; /* Optional: subtle border */
+}
+
+.hero .container {
+    position: relative; 
+    z-index: 3; 
+}
+
+.hero h1 {
+    color: #ffffff;
+    text-shadow: none; /* Ensuring no old text-shadow from Graventure remains */
+}
+
+.hero p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c0c0c0; /* Lighten paragraph text in hero if needed */
+    font-size: 1.15rem; /* Slightly larger for impact */
+    margin-bottom: 1.5rem;
+}
+
+/* Styles for the animated typing text */
+.typing-container {
+    min-height: 3em; /* Ensure space for text, adjust as needed based on font size and line wrapping */
+}
+
+#animated-text {
+    font-weight: bold; /* Make the animated text bold */
+    font-size: 1.35rem; /* Increased font size for standout effect */
+    color: #ffffff; /* Ensure pure white color for max contrast */
+    /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); */ /* Optional: subtle glow */
+}
+
+#typing-cursor {
+    display: inline-block;
+    width: 10px; /* Width of the cursor */
+    height: 1.3em; /* Height relative to font size */
+    background-color: #e0e0e0; /* Cursor color */
+    margin-left: 5px; /* Space between text and cursor */
+    animation: blink 1s step-end infinite;
+    vertical-align: baseline; /* Align with text baseline */
+}
+
+@keyframes blink {
+    from, to { background-color: transparent; }
+    50% { background-color: #e0e0e0; } /* Cursor visible color */
+}
+
+/* Section Styling */
+section {
+    padding: 40px 0; /* Standardized padding for sections */
+    border-bottom: 1px solid #1a1a1e; /* Optional: separator between sections */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* CTA Section - Styles can be adapted or kept if .cta class is used, currently new HTML has generic sections */
+/* For now, assuming .cta-button is globally styled and can be used anywhere */
+.cta {
+    background-color: #08080A; /* Slightly different background if used as a distinct section */
+    text-align: center;
+}
+
+.cta h2 {
+    border-bottom: none; /* Remove default border for h2 if it's a CTA title */
+    background: none; /* Remove gradient for CTA h2 */
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: #ffffff; /* White for CTA h2 */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta h3 {
+    color: #b0b0b0; /* Lighter subheading for CTA */
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #007bff, #00aaff); /* Keep gradient for buttons */
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 5px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    color: #ffffff; /* Ensure text color remains on hover */
+    opacity: 1; /* Override general link hover opacity if needed */
+}
+
+/* Styles for the Footer (can be kept or adapted) */
+footer {
+    background-color: #030304; /* Darker footer */
+    color: #a0a0a0;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    /* Footer links can keep gradient or be simplified */
+    /* background: linear-gradient(to right, #007bff, #00aaff); */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
+    color: #00aaff; /* Simpler color for footer links */
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #007bff;
+    opacity: 1;
+}
+
+/* --- Responsive Styles --- */
+/* Review and adapt existing media queries. Removing specific Graventure styles first. */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Adjusted for The Agentic Founder */
+    }
+    /* Removed .hero h2 related to old tagline */
+    h2 {
+        font-size: 1.8rem; /* Adjusted */
+    }
+    h3 {
+        font-size: 1.4rem; /* Adjusted */
+    }
+    .container {
+        padding: 30px 15px; /* Adjusted padding */
+    }
+    .hero {
+        padding: 60px 0 40px; /* Adjusted hero padding */
+    }
+
+    /* Removed .cta specific h2, h3 media queries if not using .cta class explicitly */
+    /* .cta-button styling is generally responsive due to inline-block and font size */
+    .cta-button {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+    /* Removed .philosophy .quote media query */
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    /* Removed .hero h2 related to old tagline */
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    /* Removed .hero .arm media query */
+    /* Removed .philosophy .quote media query */
+    /* Removed .cta h2, h3 media queries if not using .cta class explicitly */
+    .cta-button {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+        width: calc(100% - 20px); /* Make buttons fill more width on small screens */
+        margin: 8px 10px; 
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+    li {
+        padding-left: 1.2em;
+        font-size: 0.95rem;
+    }
+}
