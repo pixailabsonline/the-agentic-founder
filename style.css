@@ -249,12 +249,18 @@ footer a:hover {
     h1 {
         font-size: 2.5rem; /* Adjusted for The Agentic Founder */
     }
-    /* Removed .hero h2 related to old tagline */
     h2 {
         font-size: 1.8rem; /* Adjusted */
     }
     h3 {
         font-size: 1.4rem; /* Adjusted */
+    }
+    p {
+        font-size: 1.15rem; /* Increased base paragraph font size for mobile */
+    }
+    li {
+        font-size: 1.15rem; /* Increased list item font size for mobile */
+        padding-left: 1.3em; /* Adjust padding if needed with new font size */
     }
     .container {
         padding: 30px 15px; /* Adjusted padding */
@@ -276,7 +282,6 @@ footer a:hover {
     h1 {
         font-size: 2rem;
     }
-    /* Removed .hero h2 related to old tagline */
     h2 {
         font-size: 1.6rem;
     }
@@ -284,10 +289,10 @@ footer a:hover {
         font-size: 1.2rem;
     }
     p {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Increased from 1rem */
     }
     .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Align with general p for this breakpoint */
     }
     /* Removed .hero .arm media query */
     /* Removed .philosophy .quote media query */
@@ -300,7 +305,7 @@ footer a:hover {
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
     li {
+        font-size: 1.05rem; /* Increased from 0.95rem */
         padding-left: 1.2em;
-        font-size: 0.95rem;
     }
 }
