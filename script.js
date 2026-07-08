@@ -1,49 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const animatedTextElement = document.getElementById('animated-text');
-    const cursorElement = document.getElementById('typing-cursor');
-    
-    const textToAnimate = "While the world races to make AI more agentic, we're focused on what matters – making the founder unreasonably agentic.";
-    const typingSpeed = 50; // Milliseconds per character
-    const initialDelay = 500; // Milliseconds before animation starts
-    const pauseDelay = 350; // Extra delay for impactful pauses (e.g., around em dash)
+document.addEventListener('DOMContentLoaded', function () {
 
-    if (!animatedTextElement || !cursorElement) {
-        console.error("Required elements for typing animation not found.");
-        return;
-    }
+    // ── Mobile nav toggle
+    const nav = document.getElementById('nav');
+    const toggle = nav.querySelector('.nav-toggle');
 
-    cursorElement.style.display = 'none'; // Hide cursor initially
+    toggle.addEventListener('click', function () {
+        const open = nav.classList.toggle('mobile-open');
+        toggle.setAttribute('aria-expanded', open);
+    });
 
-    setTimeout(() => {
-        cursorElement.style.display = 'inline-block'; // Show cursor when animation starts
-        typeText(0);
-    }, initialDelay);
+    // Close mobile nav when a link is clicked
+    nav.querySelectorAll('.nav-mobile a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            nav.classList.remove('mobile-open');
+            toggle.setAttribute('aria-expanded', false);
+        });
+    });
 
-    function typeText(charIndex) {
-        if (charIndex < textToAnimate.length) {
-            animatedTextElement.textContent += textToAnimate.charAt(charIndex);
-            
-            let nextCharDelay = typingSpeed;
-            // Check for characters that should trigger a pause
-            // Pause after "matters " (before the em dash)
-            if (textToAnimate.substring(charIndex, charIndex + 2) === "s ") { // Check for "s" followed by space before em dash
-                 if (textToAnimate.charAt(charIndex+2) === '–'){
-                    nextCharDelay = pauseDelay;
-                 }
+    // ── FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const answer = btn.nextElementSibling;
+
+            // Close all others
+            document.querySelectorAll('.faq-question').forEach(function (other) {
+                other.setAttribute('aria-expanded', 'false');
+                other.nextElementSibling.hidden = true;
+            });
+
+            // Toggle this one
+            if (!expanded) {
+                btn.setAttribute('aria-expanded', 'true');
+                answer.hidden = false;
             }
-            // Pause after "– " (the em dash and space after it)
-            else if (textToAnimate.substring(charIndex, charIndex + 2) === "– ") {
-                nextCharDelay = pauseDelay;
-            }
+        });
+    });
 
-            setTimeout(() => typeText(charIndex + 1), nextCharDelay);
-        } else {
-            // Animation finished
-            // To keep cursor blinking at the end:
-             cursorElement.style.display = 'inline-block'; 
-            // To stop blinking and hide cursor:
-            // cursorElement.style.animation = 'none'; 
-            // cursorElement.style.backgroundColor = 'transparent'; 
-        }
-    }
 });
