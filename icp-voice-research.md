@@ -479,6 +479,40 @@ These are homepage and hero copy lines from Collective 54 and Built to Sell — 
 
 ---
 
+## Additional Quotes — Fifth Research Pass (HN, Built to Sell blog, Axial)
+
+The sharpest lines from the final research pass:
+
+> "You are no longer the owner of the business. You are an employee."
+— mmaunder (HN, on what selling a personal brand business actually means — Monday morning after close, you commute to work and do what you're told by the new owners)
+
+> "When your only buyer is your biggest client, you don't have an exit. You have a renegotiated employment contract."
+— HN thread synthesis (on the consulting firm acquihire trap — the most common "exit" available to founder-dependent firms)
+
+> "It took me 18 months to recover. 2.5 years to regain a level of confidence in who I am and what I do."
+— throawaycofnder, HN (on forced exit from the company they built — the identity recovery timeline nobody discusses when founders are planning exits)
+
+> "All it'll take is for one firm to break ranks — fire consultants and replace them with AI — and for the stock market to reward that behavior. Then, it'll be checkmate."
+— disqard, HN (on the game theory of consulting disruption — the threat is not AI directly, it's the competitive pressure it creates across the entire market)
+
+> "You bring in consultants when you want to make a decision but don't want responsibility. Soon companies will defer to AI instead."
+— afavour, HN (consulting's core product is accountability-laundering — AI is becoming a cheaper version of that function)
+
+> "If you're going to put all of your monetary assets into one investment vehicle, you're probably going to put all of your other assets — skills, contacts, time — into this investment as well."
+— roymurdock, HN (the founder who conflates personal capital with company identity — disengaging requires rebuilding yourself, not just the business)
+
+> "Staying on after the sale when you're already checked out can quietly cost you your earn-out."
+— Built to Sell blog, Ep.553
+
+**Exit Readiness Index Q2 2026 — hard data:**
+- 58% of business owners plan to exit within five years. Median owner age: 54.
+- Only **1%** of those who received written acquisition offers were actually ready to sell.
+- 21% of owners received unsolicited written offers in the past year (up from 13% eighteen months ago).
+
+*The readiness gap: more offers arriving than ever. Almost nobody prepared to take them. The window is narrowing. The preparation has not happened.*
+
+---
+
 ## Additional Quotes — Fourth Research Pass (Practical Founders, Axial, Hacker News)
 
 **The sharpest new lines:**
@@ -535,6 +569,102 @@ These are homepage and hero copy lines from Collective 54 and Built to Sell — 
 - "clients hire me, not the firm"
 - "I was the hub and everyone was a spoke"
 - "every decision still runs through me"
+
+---
+
+---
+
+## What They've Already Tried — And Why It Didn't Work
+
+The research makes this pattern explicit. These founders have not been sitting still. They've tried things. Each partial solution addressed one piece and left the rest untouched.
+
+**They've read Built to Sell.** The book "stung." They understood the problem intellectually. Understanding it didn't fix it. The implementation required is multi-year and emotionally difficult. Most don't finish it.
+
+**They've attended EO or Vistage.** Peer groups help with isolation. They don't help with AI strategy, valuation, or the identity question after exit. The advice is peer-to-peer — experienced in running businesses, not in navigating this specific transition.
+
+**They've hired M&A advisers.** "We hired a credentialed advisor. It still went sideways." The advisory model is transactional and price-focused. It doesn't address identity, AI, cultural survival, or what the founder needs to do *before* engaging buyers.
+
+**They've talked to technology consultants.** Got tools and AI implementation advice. Nobody connected it to the exit question, the valuation impact, or whether to transform before or after selling.
+
+**They've talked to executive coaches.** Got help with clarity and identity. Nobody connected it to the specific decisions about AI, institutional design, or succession that are actually on the table.
+
+**They've waited for an inbound offer.** Received it. Were unprepared. "Inbound interest, while flattering, often puts the business owner in a weaker position. The investor sets the timeline, frames the conversation, and anchors the valuation."
+
+The result: each adviser solved their piece. Nobody held the whole picture. The founder left every meeting with one answer and five new questions.
+
+---
+
+## The Three Segments — Their Specific Language
+
+The July 2026 Agentic Founder positioning document identified three distinct audiences. The research confirms they are distinct. Their fear language is different.
+
+---
+
+**Segment 1 — The Exit Founder**
+*Pain: "My company still depends on me."*
+
+Their language:
+- "I've created myself a job."
+- "You can't sell a reputation."
+- "Failed miserably when I tried to sell it."
+- "The only realistic buyer is my biggest client."
+- "1% of offer recipients are actually ready to sell."
+- "What founder dependence signals to a buyer, and exactly what it takes off your price."
+- "Buyers don't pay for what you've built. They pay for what survives without you."
+
+What they need: someone who can map what needs to change before the exit process begins — and how AI either helps or hurts that preparation.
+
+---
+
+**Segment 2 — The Transformation Founder**
+*Pain: "I don't know what an AI-native version of this company should become."*
+
+Their language:
+- "Evolve or die."
+- "A tidal wave that's coming."
+- "All of a sudden, in a matter of a week, our A players were now C players."
+- "If I'm going to get a project done in 10 minutes, how are we going to charge hundreds of thousands?"
+- "The risk right now is not ignoring AI. The risk is staying stuck in the previous version of it."
+- "AI Made the Team Faster. Under Hourly Billing, That's a Threat, Not a Win."
+- "I've honed the talent into a skill over several decades. Now that skill has already been commoditized."
+
+What they need: someone who can help them think through what of their judgment should become institutional, what should become agentic, and what should remain personal — before implementation.
+
+---
+
+**Segment 3 — The Thought Leader**
+*Pain: "My life's work is trapped inside me."*
+
+Their language:
+- "Knowledge lives in the founder's head."
+- "Tribal knowledge goes to the grave with the founder."
+- "Delegation without memory creates drift."
+- "There's no way I'm gonna let that machine represent my brand."
+- "Knowledge is the value. The human is just the medium."
+- "Time, freedom and a wealth of knowledge, but no outlet for it."
+- "Too experienced to start from scratch, too energised to step away entirely, too seasoned to waste your hard-earned lessons."
+
+What they need: someone who can help them decide what of themselves the company carries forward — what becomes institutional, what becomes an AI system, what remains personal, and who owns it.
+
+---
+
+## How These Founders Find Answers — The Private Searcher Insight
+
+This is buried in the research and deserves to be prominent.
+
+The YouTube research across 57 videos and 700+ comments found a structural fact: **the content designed specifically for this audience gets near-zero public comments.** Built to Sell Radio episodes, Succession Plus, professional services exit planning from Moss Adams and Collective 54 — all have audiences that consume and think privately. They do not comment publicly.
+
+The same pattern holds in other public forums. HN comments on this topic come mostly from younger, smaller operators. The $10M–$50M founder is rarely visible in comment sections, Reddit threads, or LinkedIn discussions.
+
+This has a direct implication for how to reach them.
+
+They are **not** looking for community. They are not looking for content to engage with publicly. They are searching privately — listening to podcasts in the car, reading Built to Sell at home, asking their accountant questions their accountant can't fully answer.
+
+What breaks through is not social media engagement. It is direct, research-first, one-to-one outreach that names the problem they've been privately sitting with and makes them feel:
+
+*"Finally. Someone understands what I've been trying to think through."*
+
+That was the objective stated in the July 2026 positioning document. The research confirms it's the right objective — because public channels don't reach this person. Private, specific, personalised contact does.
 
 ---
 
