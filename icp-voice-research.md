@@ -1,7 +1,7 @@
 # ICP Voice Research: The Final Act of Agency
 ## How 8-Figure Expertise Business Founders Actually Talk About Their Problems
 
-**Research basis:** Built to Sell Radio (50+ episodes), Collective 54 Pro Serv Podcast (30+ episodes), Collective 54 POV Essays and Founder Field Notes, Axial Middle Market Review, YouTube comment analysis (700+ comments), nothingeasyaboutthis.com, Vistage research centre.
+**Research basis:** Built to Sell Radio (50+ episodes), Collective 54 Pro Serv Podcast (30+ episodes), Collective 54 POV Essays and Founder Field Notes, Axial Middle Market Review, YouTube comment analysis (700+ comments), nothingeasyaboutthis.com, Vistage research centre, MIT Sloan Management Review, Harvard Business Review, Consulting Success.
 
 **Filter applied throughout:** Only founders of substantial expertise businesses (consulting firms, advisory practices, specialist service businesses) speaking from lived experience. Advisory articles excluded unless a specific founder is quoted directly.
 
@@ -386,6 +386,96 @@ The research makes this explicit. Eight-figure expertise founders approaching tr
 The person who needs help is sitting at the intersection of all five. Nobody is there.
 
 This is the gap The Final Act of Agency fills.
+
+---
+
+## Additional Quotes — Third Research Pass
+
+These surfaced in the third research pass and add precision to the six fears above.
+
+**On the structural trap:**
+
+> "If your business depends on you personally to sell, deliver, or retain clients, you're not selling an asset. You're selling your job."
+— Greg Alexander, Collective 54
+
+> "The difference between a 5x EBITDA deal and a 10x deal comes down to that shift." [when the founder is no longer the bottleneck]
+— Greg Alexander, Collective 54
+
+> "Most boutiques are unsellable. It is not enough to have a successful boutique."
+— Collective 54, "Costly Mistakes Selling a Business"
+
+> "The process of selling a business takes about nine months. However, the process of preparing to sell takes two to three years."
+— Collective 54
+
+> "The $10M plateau is where the limitations of your operating model, pricing strategy, client mix, and service design all converge."
+— Collective 54, "Planning for the Plateau"
+
+> "It's a series of smaller deaths — of habits, assumptions, and business models that no longer fit."
+— Ken Yager, Collective 54, "Scaling Valleys"
+
+> "The danger for boutique firms isn't chaos. It's stagnation disguised as stability."
+— George Jagodzinski, Collective 54
+
+**On AI erasing expertise value (from MIT Sloan and HBR):**
+
+> "As AI dramatically reduces the cost of replicating expertise, what was once the source of competitive advantage — proprietary methods, scale, 10 years of training — collapses."
+— MIT Sloan Management Review, "Leadership's Blind Spot in the Age of AI"
+
+> "The standard fear about AI runs one way: machines are becoming more like humans. The real danger may run in the opposite direction. We are becoming more like machines."
+— MIT Sloan Management Review
+
+> "AI can kill the individual DNA of an organisation by cleaving to the generic standard, undermining the organisations it seeks to streamline."
+— Harvard Business Review, "Don't Let AI Destroy the Skills That Make Your Company Competitive" (Apr 2026)
+
+> "Organisations become more automated, yet less adaptive. More data-driven, yet less wise. More efficient, yet less legitimate."
+— Harvard Business Review (Apr 2026)
+
+> "Knowledge is the value. The human is just the medium."
+— Michael Gibbs, consulting firm founder, Collective 54
+
+> "Whilst we all feel more productive — who has benefited from the gains? Not owners or founders. It's going to the employees."
+— Ben Edwards, Collective 54, "Who Is Really Getting the AI Productivity Gains?"
+
+> "The risk right now is not ignoring AI. The risk is staying stuck in the previous version of it."
+— Collective 54
+
+**On legacy — the sharpest lines found:**
+
+> "In many cases, the founder is the firm. When he or she passes, there is no glue to keep it going."
+— Collective 54, "A Lifestyle Business Does Not Have to Die When the Founder Does"
+
+> "Founders have lots of tribal knowledge that is essential to the success of the firm. If the tribal knowledge goes to the grave with the founder, the firm won't be far behind."
+— Collective 54
+
+> "Sales drop 60% within four years of a founder's death. Employment drops 17%."
+— Collective 54, citing research
+
+> "Every entrepreneur exits. We all die. You cannot run your boutique from the grave."
+— Collective 54
+
+> "Was being the owner and CEO of this firm helping me self-actualize? The answer was no."
+— Greg Alexander (on his own exit)
+
+**On burnout as the real driver:**
+
+17.5% of business owners cite burnout — not retirement — as their primary motivation to exit.
+— Built to Sell / PREScore data
+
+> "If you're tired, is that a signal to sell — or a problem worth fixing first?"
+— Built to Sell
+
+> "An hour spent working is an hour you did not spend with someone you care about."
+— Collective 54, "The Concealed Steep Personal Cost of Being a Founder"
+
+**What the platforms lead with — framing that resonates:**
+
+These are homepage and hero copy lines from Collective 54 and Built to Sell — evidence of what lands with this audience:
+
+- *"Revenue climbs but profit doesn't keep pace. The founder stays central to sales, to delivery, to every decision that matters."*
+- *"The firm gets heavier as it gets bigger."*
+- *"Build durable EBITDA and reduce founder dependency — so the firm is worth what you've put into it."*
+- *"The firms that scale cleanly and exit well are not lucky. They are architected."*
+- *"One of the first steps in building a valuable company is ensuring your business can thrive without you."*
 
 ---
 
