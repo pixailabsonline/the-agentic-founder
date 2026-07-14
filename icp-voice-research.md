@@ -479,6 +479,65 @@ These are homepage and hero copy lines from Collective 54 and Built to Sell — 
 
 ---
 
+## Additional Quotes — Fourth Research Pass (Practical Founders, Axial, Hacker News)
+
+**The sharpest new lines:**
+
+> "You may have a profitable company and an unsellable one at the same time."
+— Built to Sell Ep.529 (on the personal brand trap — profitable and unsellable are not mutually exclusive)
+
+> "Delegation without intelligence creates risk. Delegation without memory creates drift. Delegation without visibility creates anxiety."
+— Collective 54 POV Essay: "The AI Founder" (on why founder judgment can't simply be handed off)
+
+> "90% of stuck companies and failed companies — it's not the reasons we say they failed. It's the psychology underneath."
+— Dave Hersh, Practical Founders Ep.175
+
+> "Hero complex, warrior, imposter syndrome, over-identification with the company — these led to the decisions that got them stuck."
+— Dave Hersh, Practical Founders Ep.175
+
+> "They're trying to earn validation. They are trying to get redeemed as an entrepreneur. They're trying to live up to their parents, their peer group."
+— Dave Hersh, Practical Founders Ep.175
+
+> "I was told the transition plan was excellent. But when they don't match your vision, bad things happen."
+— Marc Weiss (on handing over to the wrong successor, Collective 54 Ep.255)
+
+> "Growth rarely stalls for lack of effort. It stalls for lack of a destination."
+— Collective 54 Founder Field Notes
+
+> "They run on instinct and last year's numbers, mistaking motion for progress."
+— Collective 54 Founder Field Notes
+
+> "Inbound interest, while flattering, often puts the business owner in a weaker position. The investor sets the timeline, frames the conversation, and anchors the valuation."
+— Axial forum
+
+> "Most founders have a number in their head. Hit the number, park it in something safe, live off 4%, and finally feel free." [and then discover it doesn't work that way]
+— Built to Sell, "The $10 Million Trap"
+
+> "Founder dependency deepened rather than diminished as firms grew, trapping leaders in operational roles rather than strategic ones."
+— Collective 54 POV Essay: "The AI Founder"
+
+> "Professional services firms consistently experienced discounted multiples, heavy deal structure, and long-term obligations during exits because buyer risk centred on founder dependency."
+— Collective 54 POV Essay: "The AI Founder"
+
+> "Software companies command ~10x revenue while services firms only 3x. Professional services revenue, though profitable, reduces overall company valuation multiples."
+— Hacker News (calcsam) — the valuation gap stated plainly by someone who has seen both
+
+> "Some AI-assisted consultant will come along and deliver more for less money."
+— Hacker News (bitwize) — how the market sees the AI threat to consultant pricing
+
+**Additional language patterns from this pass:**
+
+- "I've created myself a job"
+- "lumpy pipeline" (how founders describe unpredictable project-based revenue)
+- "you may have a profitable company and an unsellable one at the same time"
+- "buyers don't pay for what you've built — they pay for what survives without you"
+- "I want out but there's nothing to sell"
+- "clients hire me, not the firm"
+- "I was the hub and everyone was a spoke"
+- "every decision still runs through me"
+
+---
+
 ## Key Sources
 
 - Built to Sell Radio: https://builttosell.com/radio/ (episodes 427–554)
