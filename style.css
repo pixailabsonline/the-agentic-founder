@@ -508,47 +508,142 @@ em { font-style: italic; color: var(--ink); }
     flex-shrink: 0;
 }
 
-/* ─── Who This Is For ────────────────────────────────────── */
+/* ─── Progression ────────────────────────────────────────── */
 
-.who { border-bottom: 1px solid var(--rule); }
+.thesis { border-bottom: 1px solid var(--rule); }
 
-.who-grid {
+.progression {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem 0 3rem;
+    max-width: 680px;
+}
+
+.progression-step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+}
+
+.progression-step-final {
+    background: var(--accent-light);
+    border-radius: 6px;
+    padding: 1.75rem;
+    border-top: 2px solid var(--accent);
+    margin-top: -1px;
+}
+
+.prog-level {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-faint);
+    padding-top: 2px;
+}
+
+.prog-level-final { color: var(--accent); }
+
+.prog-title {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 0.5rem;
+}
+
+.prog-title-final { color: var(--accent); }
+
+.prog-desc {
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+    margin-bottom: 0.5rem;
+}
+
+.prog-verdict {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+}
+
+.prog-verdict-weak { color: var(--ink-muted); }
+.prog-verdict-mid  { color: var(--ink-mid); }
+.prog-verdict-strong { color: var(--accent); }
+
+.progression-arrow {
+    color: var(--ink-faint);
+    font-size: 0.85rem;
+    padding-left: 14px;
+    line-height: 1;
+}
+
+.thesis-statement {
+    max-width: 680px;
+    border-left: 2px solid var(--accent);
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.thesis-statement p { font-size: 1.05rem; }
+
+/* ─── Problem ─────────────────────────────────────────────── */
+
+.problem { border-bottom: 1px solid var(--rule); }
+
+.problem-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 1rem;
 }
 
-.who-card {
-    border-top: 2px solid var(--accent);
+.problem-card {
+    border-top: 2px solid var(--rule);
     padding-top: 1.5rem;
 }
 
-.who-card .idea-num {
+.problem-num {
     font-family: var(--serif);
     font-style: italic;
     font-size: 1rem;
     color: var(--ink-faint);
     margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
-    display: block;
 }
 
-.who-card .idea-heading {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    font-weight: 400;
-    line-height: 1.35;
-    letter-spacing: -0.01em;
-    text-transform: none;
-    color: var(--ink);
-    margin-bottom: 1rem;
-}
-
-.who-card p { font-size: 0.95rem; }
+.problem-card p { font-size: 0.95rem; }
 
 @media (max-width: 900px) {
-    .who-grid { grid-template-columns: 1fr; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .progression-step { grid-template-columns: 36px 1fr; gap: 1rem; }
+}
+
+/* ─── Work offer labels ───────────────────────────────────── */
+
+.work-offer-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+}
+
+.work-offer-title {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    text-transform: none;
 }
 
 /* ─── Mirror ─────────────────────────────────────────────── */
