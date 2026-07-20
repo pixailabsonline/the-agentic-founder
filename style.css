@@ -508,6 +508,49 @@ em { font-style: italic; color: var(--ink); }
     flex-shrink: 0;
 }
 
+/* ─── Who This Is For ────────────────────────────────────── */
+
+.who { border-bottom: 1px solid var(--rule); }
+
+.who-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.who-card {
+    border-top: 2px solid var(--accent);
+    padding-top: 1.5rem;
+}
+
+.who-card .idea-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-faint);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.who-card .idea-heading {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+
+.who-card p { font-size: 0.95rem; }
+
+@media (max-width: 900px) {
+    .who-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── Mirror ─────────────────────────────────────────────── */
 
 .mirror {
