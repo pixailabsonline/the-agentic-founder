@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forward Deployed Engineer &mdash; Peter Idah</title>
+    <meta name="description" content="Job postings grew 800% in a year. $7 billion committed in six months. And the structural mistake almost everyone is making. A complete guide to what the FDE role actually is.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* ─── Reading Progress ──────────────────────────────── */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 200;
+            width: 0%;
+            transition: width 0.08s linear;
+            pointer-events: none;
+        }
+
+        /* ─── Article Header ────────────────────────────────── */
+        .article-header {
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .article-header .container {
+            padding-top: 88px;
+            padding-bottom: 64px;
+        }
+
+        .article-meta {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-title {
+            font-family: var(--serif);
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            color: var(--ink);
+            max-width: 580px;
+            margin-bottom: 0;
+        }
+
+        /* ─── Article Body ──────────────────────────────────── */
+        .article-body {
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .article-body .container {
+            padding-top: 56px;
+            padding-bottom: 80px;
+        }
+
+        .article-p {
+            font-size: 1.1rem;
+            line-height: 1.82;
+            color: var(--ink-mid);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-p strong {
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        .article-p sup a {
+            color: var(--ink-faint);
+            font-size: 0.75em;
+            text-decoration: none;
+            font-family: var(--sans);
+        }
+
+        .article-p sup a:hover { color: var(--accent); }
+
+        /* ─── Section Breaks ────────────────────────────────── */
+        .article-section {
+            margin-top: 3.5rem;
+            padding-top: 3.5rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .article-h2 {
+            font-family: var(--serif);
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            font-weight: 400;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            margin-bottom: 1.75rem;
+            max-width: 520px;
+        }
+
+        /* ─── Pull Quote ─────────────────────────────────────── */
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding: 1.25rem 0 1.25rem 1.75rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .pull-quote p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            line-height: 1.5;
+            color: var(--ink);
+            margin: 0;
+        }
+
+        /* ─── "What happens next?" isolation ─────────────────── */
+        .pivot-moment {
+            margin: 2.5rem 0;
+            padding: 2.25rem 0;
+            text-align: center;
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .pivot-moment p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
+            color: var(--ink);
+            letter-spacing: -0.015em;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* ─── Step One / Step Two Visual ─────────────────────── */
+        .steps-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .step-card {
+            background: var(--paper-off);
+            padding: 1.75rem;
+        }
+
+        .step-card-two {
+            background: var(--accent-light);
+        }
+
+        .step-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-label-two { color: var(--accent); }
+
+        .step-num {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 2.25rem;
+            color: var(--ink-faint);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-num-two { color: var(--accent); }
+
+        .step-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.6rem;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--ink-mid);
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+
+        .step-verdict {
+            font-size: 0.78rem;
+            font-style: italic;
+            color: var(--ink-muted);
+            margin: 0;
+        }
+
+        .step-verdict-two {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* ─── Dimon / BCG Quote ───────────────────────────────── */
+        .article-blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem 1.75rem;
+            background: var(--paper-off);
+            border: 1px solid var(--rule);
+            border-radius: 6px;
+            border-left: 3px solid var(--ink-mid);
+        }
+
+        .article-blockquote p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--ink);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-blockquote cite {
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            font-style: normal;
+            letter-spacing: 0.02em;
+            display: block;
+            margin: 0;
+        }
+
+        /* ─── Archetype Bar ──────────────────────────────────── */
+        .archetype-bar-wrap {
+            margin: 1.75rem 0 2.25rem;
+        }
+
+        .archetype-bar {
+            display: flex;
+            height: 44px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid var(--rule);
+        }
+
+        .arch-seg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #fff;
+        }
+
+        .arch-seg-builder { background: var(--accent); width: 60%; }
+        .arch-seg-sales   { background: var(--ink-mid); width: 30%; }
+        .arch-seg-internal{ background: var(--ink-faint); width: 10%; font-size: 0; }
+
+        .archetype-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .arch-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            color: var(--ink-mid);
+            line-height: 1.5;
+        }
+
+        .arch-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .arch-dot-builder  { background: var(--accent); }
+        .arch-dot-sales    { background: var(--ink-mid); }
+        .arch-dot-internal { background: var(--ink-faint); }
+
+        .arch-pct {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        /* ─── 4-point Checklist ──────────────────────────────── */
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .check-list li {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 0.75rem;
+            padding: 1.1rem 0;
+            border-top: 1px solid var(--rule);
+            font-size: 1rem;
+            color: var(--ink-mid);
+            line-height: 1.7;
+            align-items: start;
+        }
+
+        .check-list li:last-child { border-bottom: 1px solid var(--rule); }
+
+        .check-num {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--accent);
+            padding-top: 2px;
+        }
+
+        /* ─── Interview Questions ────────────────────────────── */
+        .interview-qs {
+            background: var(--paper-off);
+            border: 1px solid var(--rule);
+            border-radius: 8px;
+            padding: 1.75rem;
+            margin: 1.75rem 0;
+        }
+
+        .interview-qs-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 1rem;
+        }
+
+        .interview-q {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--ink);
+            padding: 0.85rem 0;
+            border-top: 1px solid var(--rule);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ─── "Shipped" callout ──────────────────────────────── */
+        .shipped-callout {
+            margin: 2.25rem 0;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .shipped-callout p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--ink-mid);
+            margin-bottom: 0.4rem;
+        }
+
+        .shipped-callout p:last-child { margin-bottom: 0; }
+
+        .shipped-word {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--accent);
+            letter-spacing: 0.03em;
+        }
+
+        /* ─── Author Close ──────────────────────────────────── */
+        .article-author {
+            border-top: 1px solid var(--rule);
+            padding-top: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .article-author-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .article-author-sub {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            margin: 0;
+        }
+
+        .article-author a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: text-decoration-color 0.15s;
+        }
+
+        .article-author a:hover { text-decoration-color: var(--accent); }
+
+        /* ─── Sources ───────────────────────────────────────── */
+        .sources-section {
+            border-top: 1px solid var(--rule);
+            margin-top: 2.5rem;
+            padding-top: 1.75rem;
+        }
+
+        .sources-label {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .sources-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sources-list li {
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            padding: 0.35rem 0;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .sources-list a {
+            color: var(--ink-mid);
+            text-decoration: underline;
+            text-decoration-color: var(--rule);
+            transition: text-decoration-color 0.15s, color 0.15s;
+        }
+
+        .sources-list a:hover {
+            color: var(--accent);
+            text-decoration-color: var(--accent);
+        }
+
+        /* ─── Final Question Section ─────────────────────────── */
+        .final-question-section {
+            background: var(--ink);
+        }
+
+        .final-question-section .container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .fq-label {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.28);
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .fq-question {
+            font-family: var(--serif);
+            font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+            font-weight: 400;
+            line-height: 1.2;
+            color: #fff;
+            text-align: center;
+            letter-spacing: -0.02em;
+            margin-bottom: 3rem;
+        }
+
+        .fq-body {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .fq-body p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .fq-close {
+            font-family: var(--serif) !important;
+            font-style: italic;
+            font-size: 1.15rem !important;
+            color: rgba(255,255,255,0.82) !important;
+        }
+
+        /* ─── Subscribe Nudge ───────────────────────────────── */
+        .article-subscribe {
+            background: var(--paper-off);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .article-subscribe .container {
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+
+        .article-subscribe .section-label { margin-bottom: 0.75rem; }
+
+        .article-subscribe p {
+            font-size: 1rem;
+            color: var(--ink-mid);
+            margin-bottom: 1.25rem;
+            max-width: 460px;
+        }
+
+        /* ─── Responsive ────────────────────────────────────── */
+        @media (max-width: 600px) {
+            .steps-visual { grid-template-columns: 1fr; }
+            .pull-quote p { font-size: 1.15rem; }
+            .article-h2 { font-size: 1.25rem; }
+            .arch-seg-builder, .arch-seg-sales { font-size: 0.72rem; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">The Agentic Founder</a>
+            <ul class="nav-links">
+                <li><a href="/#work">The Work</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#newsletter">Writing</a></li>
+            </ul>
+            <a href="/#work" class="nav-book">Start the conversation</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile">
+            <a href="/#work">The Work</a>
+            <a href="/#about">About</a>
+            <a href="/#newsletter">Writing</a>
+            <a href="/#work" class="nav-mobile-cta">Start the conversation</a>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HEADER -->
+    <header class="article-header">
+        <div class="container container-narrow">
+            <p class="article-meta">Peter Idah &middot; July 2026</p>
+            <h1 class="article-title">The Forward Deployed Engineer</h1>
+        </div>
+    </header>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body" id="article-top">
+        <div class="container container-narrow">
+
+            <!-- OPENING -->
+            <p class="article-p">There is a job title spreading through the market right now faster than almost any other in the history of software engineering.</p>
+            <p class="article-p"><strong>Forward Deployed Engineer.</strong></p>
+            <p class="article-p">Job postings grew over 800 percent in a single year.<sup><a href="#source-1">[1]</a></sup> In the first half of 2026 alone, Microsoft committed $2.5 billion to embed 6,000 engineers at customer sites.<sup><a href="#source-2">[2]</a></sup> AWS followed with $1 billion and a programme to place thousands more.<sup><a href="#source-3">[3]</a></sup> OpenAI acquired a pure-play FDE firm in Edinburgh, launched a heavily-funded deployment subsidiary, and then released a managed FDE product to enterprise customers.<sup><a href="#source-4">[4]</a></sup> Databricks formalised a function it had been running quietly for a decade. Deloitte became the first Big 4 firm to formally brand a service line as Forward Deployed Engineering.<sup><a href="#source-5">[5]</a></sup> Combined, the largest technology companies in the world committed somewhere north of $7 billion to this model in the space of six months.</p>
+            <p class="article-p">Every company that wants to look serious about enterprise deployment wants FDEs. Recruiters are pushing engineers toward the role. Hiring managers are writing job specs for it without being entirely sure what they are writing.</p>
+            <p class="article-p">The mistake is not a small one. Not a nuance mistake. It is structural: companies are paying for one thing and getting another, engineers are building careers that may be leading somewhere they did not intend to go, and the entire function is being measured by the wrong output.</p>
+            <p class="article-p">This document explains that mistake. Then it goes further, into what the role actually costs engineers who take it, how to tell which version of it you are walking into, and the single question that cuts through everything.</p>
+            <p class="article-p">By the end, you will see the role differently. That is the point.</p>
+
+            <!-- SECTION 1 -->
+            <div class="article-section">
+                <h2 class="article-h2">The moment that explains everything</h2>
+                <p class="article-p">Imagine you are the person who first put a software engineer inside a customer's environment. Not to demo a product. Not to answer support tickets. To actually live there for an extended period and figure out what needed to exist.</p>
+                <p class="article-p">Something unexpected happens.</p>
+                <p class="article-p">The engineer starts seeing things that nobody at headquarters has ever seen. Not because the customer was hiding them. Because they were invisible until someone with the right technical lens was standing in the right place.</p>
+                <p class="article-p">They see where the product breaks in conditions the product team never imagined. They see what the customer actually needs versus what they said they needed during the sales process, which turns out to be two different things. They see workarounds that have been running for years, invisible to everyone, representing features the product should have built but never did.</p>
+                <p class="article-p">That engineer goes back to headquarters carrying something extraordinary: unfiltered contact with reality.</p>
+                <p class="article-p">Now here is the question that determines everything about whether this function creates lasting value or just expensive consulting.</p>
+
+                <div class="pivot-moment">
+                    <p>What happens next?</p>
+                </div>
+            </div>
+
+            <!-- SECTION 2 -->
+            <div class="article-section">
+                <h2 class="article-h2">The two steps, and why almost everyone stops at one</h2>
+                <p class="article-p">A real forward deployed function has two steps.</p>
+
+                <div class="steps-visual">
+                    <div class="step-card">
+                        <p class="step-label">Step one</p>
+                        <p class="step-num">01</p>
+                        <p class="step-title">Deploy and deliver</p>
+                        <p class="step-desc">The engineer deploys. They solve the customer's problem, get the product working in a difficult environment, and the customer goes live.</p>
+                        <p class="step-verdict">Most companies do this.</p>
+                    </div>
+                    <div class="step-card step-card-two">
+                        <p class="step-label step-label-two">Step two</p>
+                        <p class="step-num step-num-two">02</p>
+                        <p class="step-title">Bring it back</p>
+                        <p class="step-desc">Everything discovered in the field flows back into the product. The broken thing becomes a feature. The workaround becomes a roadmap item. The gap becomes the next version.</p>
+                        <p class="step-verdict step-verdict-two">Most companies stop at step one.</p>
+                    </div>
+                </div>
+
+                <p class="article-p">When step two works, every hard deployment makes the product stronger for every deployment that follows. The most difficult customers produce the most product learning. The pain one engineer absorbs in the field becomes the moat against every competitor who has not been in that field.</p>
+
+                <div class="pull-quote">
+                    <p>The practitioners who have lived this role have a phrase for it: the pain is the moat.</p>
+                </div>
+
+                <p class="article-p">When companies only do step one, they have a deployment team. A useful team. A team that generates revenue. But a team whose value is entirely transactional. Customer goes live, FDE moves on, the product is identical to what it was before. Nothing compounded. Nothing built.</p>
+                <p class="article-p">That is where most companies running this function right now are. They hired the title. They built step one. They measured deployment speed. And they called it a forward deployed engineering function.</p>
+            </div>
+
+            <!-- SECTION 3 -->
+            <div class="article-section">
+                <h2 class="article-h2">The question worth asking</h2>
+                <p class="article-p">The $7 billion committed to FDE-style deployment in the first half of 2026 is mostly funding step one at industrial scale. Faster deployments. More clients per engineer. Lower cost per seat. Every enterprise will have AI deployed by the end of 2026 because the deployment machinery is now enormous and cheap.</p>
+                <p class="article-p">So where is the competitive advantage if every company deploys the same models, using the same platforms, through the same FDE playbook?</p>
+
+                <div class="article-blockquote">
+                    <p>"You don't uniquely benefit from AI. The ultimate beneficiary of AI will be our customers. In a competitive capitalist world, we all will use AI to do a better job for the customers."</p>
+                    <cite>Jamie Dimon, JPMorgan Q2 2026 earnings call. His analogy: banking spent two decades computerising every process. Margins are not 80% today. The benefit passed through to customers because every bank adopted the same tools.</cite>
+                </div>
+
+                <p class="article-p">A BCG study of 800 public companies published in February 2026 put numbers behind the intuition.<sup><a href="#source-6">[6]</a></sup> The correlation between a company's automation potential and its actual margin growth: essentially zero. "Gen AI is delivering real productivity gains, but across industries, those gains are being competed away, eroding margins rather than expanding them."</p>
+                <p class="article-p">The venture capital framing is sharper still: the moat is not the model. Every company can access the same frontier models. The advantage has shifted to how organisations convert common tools into something uncommon.</p>
+                <p class="article-p">There is AI that makes a company faster. And there is AI that makes a company genuinely harder to copy. Most companies chasing FDE deployments right now are building the first kind and calling it transformation.</p>
+                <p class="article-p">The second kind is AI that compounds, that builds on what the company uniquely knows, that makes each deployment smarter than the last because of what was learned in the previous one. That is what step two actually produces. Not a faster deployment. A product that gets harder to compete with every time an engineer goes into the field and brings something back.</p>
+
+                <div class="pull-quote">
+                    <p>Speed without compounding is just expensive. And right now, most of the $7 billion is buying exactly that.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 4 -->
+            <div class="article-section">
+                <h2 class="article-h2">Why a software company reached for a military term</h2>
+                <p class="article-p">Forward deployed is a military concept. In combat operations, forward deployed units operate at the edge of the known, ahead of the support infrastructure, inside the environment where the actual situation is happening, close enough to reality that they can act on what they find rather than waiting for headquarters to process it and send instructions back.</p>
+                <p class="article-p">That is not accidental language. That is a precise description of the problem Palantir was trying to solve.</p>
+                <p class="article-p">The core failure in enterprise software deployment is the distance between the people who build the product and the environment where it has to work. Headquarters does not know what the field looks like. The field cannot wait for headquarters to figure it out. By the time a product team processes customer feedback, prioritises it, builds to it, and ships it, the customer has either built a workaround or given up.</p>
+                <p class="article-p">Forward deployed engineering collapses that distance. It puts the engineer in the field, with the authority to act on what they find, close enough to reality that what they learn can move fast.</p>
+                <p class="article-p">The military analogy holds because the military solved this problem first. You cannot run a campaign from a map. You need people forward, with judgment, who can bring back what the map does not show.</p>
+                <p class="article-p">That is the insight buried in the title. The name is not branding. It is a description of an organisational design choice: stop trying to understand the customer from a distance and instead put the engineer where the truth actually is.</p>
+                <p class="article-p">Most companies hiring FDEs have adopted the title without adopting the logic behind it. They hired forward deployed engineers and kept them on a long leash back to headquarters, waiting for approval, feeding findings into a backlog nobody reads.</p>
+
+                <div class="pull-quote">
+                    <p>The name promised one thing. The org chart delivered another.</p>
+                </div>
+            </div>
+
+            <!-- SECTION 5 -->
+            <div class="article-section">
+                <h2 class="article-h2">What the role actually looks like</h2>
+                <p class="article-p">There is a version of the FDE role that gets described in recruiting conversations.</p>
+                <p class="article-p">High-stakes environments. Consequential decisions. The engineer who operates where others cannot. The closest thing software has to special operations.</p>
+                <p class="article-p">Here is what practitioners describe instead.</p>
+                <p class="article-p">Ten concurrent client engagements. Fifty-hour weeks. Constant context switching between organisations with different cultures, different technical stacks, and different definitions of what they bought. Extended travel to wherever the client is located, which is not always somewhere you would choose to go. Hardware retrofits in facilities that look like factories. Long periods away from any fixed base.</p>
+                <p class="article-p">One veteran practitioner described the genuine version as "hacker tourist" work. Prudhoe Bay. Unnamed locations. Things that were basically factories but you would not recognise them from the outside. Bridging between the customer's technical team and the vendor's team in conditions where hardware is involved, things can break in physical ways, and the work is as much logistics as it is software.</p>
+                <p class="article-p">The gap between that and the recruiting pitch is significant.</p>
+                <p class="article-p">This is not an argument against taking the role. The version that leads to step two, that puts you in the product intelligence loop at a company that understands what you are actually doing, can be one of the most valuable engineering careers available. The top labs are paying over $500,000 for engineers who genuinely compound at this level.</p>
+                <p class="article-p">Go in with clear eyes. The glamour is often the cover. The work is in the field, and the field is frequently unglamorous.</p>
+            </div>
+
+            <!-- SECTION 6 -->
+            <div class="article-section">
+                <h2 class="article-h2">Three roles wearing the same name</h2>
+                <p class="article-p">Bloomberry analysed one thousand FDE job postings in late 2025 and found three completely different roles under one title.</p>
+
+                <div class="archetype-bar-wrap">
+                    <div class="archetype-bar">
+                        <div class="arch-seg arch-seg-builder">60%</div>
+                        <div class="arch-seg arch-seg-sales">30%</div>
+                        <div class="arch-seg arch-seg-internal">10%</div>
+                    </div>
+                    <div class="archetype-legend">
+                        <div class="arch-item">
+                            <span class="arch-dot arch-dot-builder"></span>
+                            <span><span class="arch-pct">60%</span> Builder FDE - builds, integrates, and extends the product inside the customer's environment</span>
+                        </div>
+                        <div class="arch-item">
+                            <span class="arch-dot arch-dot-sales"></span>
+                            <span><span class="arch-pct">30%</span> Sales Engineer Plus - deployment as commercial validation, not product development</span>
+                        </div>
+                        <div class="arch-item">
+                            <span class="arch-dot arch-dot-internal"></span>
+                            <span><span class="arch-pct">10%</span> Internal Tools Builder - building internal tooling, not embedded at customer sites</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="article-p">One practitioner who went through the full recruiting pitch at the firm that invented this model put the Sales Engineer Plus version plainly: "Oh, so you want me to be a sales consultant." The company did not take this well. Most of the market has validated his read.</p>
+                <p class="article-p">Median salary across all three: $173,816. None of the postings describe quota-carrying structures, which means the thirty percent doing sales-support work are not being compensated like salespeople. They are doing two jobs and being paid for one.</p>
+                <p class="article-p">If you are a hiring manager writing a spec for a Builder FDE and the spec reads like Sales Engineer Plus, you will hire the wrong person and measure them against the wrong outcomes. The function will appear not to work. You will conclude the role is flawed. You will be wrong. The spec was flawed.</p>
+                <p class="article-p">If you are an engineer evaluating an offer, the title will not tell you which of these three you are walking into. You have to ask directly.</p>
+            </div>
+
+            <!-- SECTION 7 -->
+            <div class="article-section">
+                <h2 class="article-h2">The career risk nobody mentions upfront</h2>
+                <p class="article-p">The FDE role carries real pigeonhole risk. Engineers who spend years in customer-facing deployment work find that the market reads them as something between a consultant and a solutions engineer. Returning to a core engineering track is harder than expected. The pattern is similar to SRE and QA: valuable experience in a lane the broader market does not know how to value.</p>
+                <p class="article-p">Whether this materialises depends entirely on which version of the role you are in.</p>
+                <p class="article-p">Engineers in the compounding model build a profile that is genuinely rare: engineers who understand customer reality at a depth that most product engineers never develop. That profile opens doors. It is one of the clearest paths into product leadership and into founder roles.</p>
+                <p class="article-p">Engineers in the bodyshop accumulate deployment experience that does not stack. Client after client, integration after integration, none of it changing the product, none of it building toward anything. The resume shows breadth. It does not show judgment. And judgment about what to build is the only thing that matters to companies building something serious.</p>
+                <p class="article-p">Before you take any FDE role, ask one question: is there a formal mechanism here for what I find in the field to reach the people building the product?</p>
+                <p class="article-p">If yes, you are potentially in the compounding model. If no, you are in the bodyshop. And the bodyshop has a ceiling.</p>
+            </div>
+
+            <!-- SECTION 8 -->
+            <div class="article-section">
+                <h2 class="article-h2">What a real FDE actually is</h2>
+                <p class="article-p">Most engineers are trained in one direction. They take what exists and make it work somewhere new. That is valuable. It is also only half the job.</p>
+                <p class="article-p">The other half is carrying what the field reveals back with enough force to change what gets built. Not as a suggestion. Not as a ticket in a backlog that nobody reads. As something that cannot be ignored because you were there, you saw it, and you understood what it meant for the product.</p>
+                <p class="article-p">That is the difference between a delivery mechanism and an intelligence asset.</p>
+                <p class="article-p">A solutions engineer is a delivery mechanism. Product flows through them to the customer. One direction.</p>
+
+                <div class="pull-quote">
+                    <p>A real FDE is an intelligence asset. They go into the field, make contact with reality, and transmit back what no one at headquarters could have found without them.</p>
+                </div>
+
+                <p class="article-p">The deployment is how they get close enough to the truth to learn something worth bringing home.</p>
+                <p class="article-p">That reversal is not a detail. It is the entire operating model. And it is what almost never happens.</p>
+                <p class="article-p">Two things show up in every FDE who actually compounds value.</p>
+                <p class="article-p"><strong>They know what to bring back.</strong> Not everything broken at a customer site is a product problem. Some of it is the customer's process. Some is a one-off edge case. A real FDE looks at ten problems and finds the one that, if fixed, improves the product for every customer that follows. Signal, not noise.</p>
+                <p class="article-p"><strong>They treat each deployment as product intelligence, not just delivery.</strong> This is not a skill. It is a way of thinking about what the work is for. Engineers who see the deployment as the job stop when it works. Engineers who see the deployment as a research exercise with a working product as its output keep going, looking for what the working product revealed.</p>
+                <p class="article-p">The second type is rare. They are the ones who build the moat.</p>
+            </div>
+
+            <!-- SECTION 9 -->
+            <div class="article-section">
+                <h2 class="article-h2">How to tell if a function is really compounding</h2>
+                <p class="article-p">Four things that separate a bodyshop from a compounding function. Not theory. Things you can check.</p>
+
+                <ol class="check-list">
+                    <li>
+                        <span class="check-num">1</span>
+                        <span><strong>The feedback loop is formal, not informal.</strong> In a bodyshop, product feedback happens when an FDE is loud enough to be heard. In a compounding function, there is a defined channel. Field findings go in. Product decisions come out. Both sides can trace the connection.</span>
+                    </li>
+                    <li>
+                        <span class="check-num">2</span>
+                        <span><strong>FDEs sit in R&amp;D, not post-sales.</strong> Where a function sits in the org tells you exactly what the company thinks it is for. Post-sales means the value has already been created. R&amp;D means the FDE is still creating it.</span>
+                    </li>
+                    <li>
+                        <span class="check-num">3</span>
+                        <span><strong>Deployments get harder before they get easier.</strong> When the feedback loop works, FDEs start bringing back more ambitious problems. They stop working around product limitations and start demanding they get fixed. Short-term friction. Medium-term, a product that is genuinely stronger for every customer after the current one. When deployments only ever get easier, the function has stopped pushing the product forward.</span>
+                    </li>
+                    <li>
+                        <span class="check-num">4</span>
+                        <span><strong>The FDE can make the customer independent.</strong> A real deployment ends when the customer can run the product without the FDE present. If the FDE has to stay for the product to work, you do not have a product. You have a managed service with a very different risk profile.</span>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- SECTION 10 -->
+            <div class="article-section">
+                <h2 class="article-h2">How to hire for this</h2>
+                <p class="article-p">Most FDE job specs describe strong engineers who can communicate. Necessary. Not sufficient.</p>
+                <p class="article-p">The question the spec should be written around: can this person make a deployment feed back into the product in a way that makes the next deployment better?</p>
+
+                <div class="interview-qs">
+                    <p class="interview-qs-label">Three questions that reveal the answer</p>
+                    <p class="interview-q">Describe a time you were at a customer site and found something broken that did not fit the product's existing model. What did you do with it? Did it change anything?</p>
+                    <p class="interview-q">How do you decide what is worth bringing back versus what is a one-off edge case?</p>
+                    <p class="interview-q">What does a successful FDE function look like at scale?</p>
+                </div>
+
+                <p class="article-p">An answer focused on deployment speed and client count describes a bodyshop. An answer that includes product improvement and feedback loops describes someone who understands what the role is actually for.</p>
+                <p class="article-p">And one question worth asking directly: what do you think the output of an FDE is?</p>
+                <p class="article-p">Engineers who say "a working deployment" understand step one. Engineers who say "a product that got better because of what I found" understand both steps.</p>
+                <p class="article-p">Hire the second type. The other type will fill your deployment slots and build nothing.</p>
+            </div>
+
+            <!-- SECTION 11 -->
+            <div class="article-section">
+                <h2 class="article-h2">If you are already in this role</h2>
+                <p class="article-p">Look at the last six months.</p>
+                <p class="article-p">Find the things you discovered in the field that should have changed the product. Did they? If not, was it because you did not surface them, or because the organisation has no real channel for them?</p>
+                <p class="article-p">The first is yours to fix. The second is a conversation worth having with your leadership. The answer will tell you whether this function can become what it should be, or whether you are in the bodyshop with no path out.</p>
+
+                <div class="shipped-callout">
+                    <p>Has anything you found in the field shipped in the last six months?</p>
+                    <p>Not logged. Not reviewed. <span class="shipped-word">Shipped.</span></p>
+                </div>
+
+                <p class="article-p">If yes: you are in the compounding model. Protect it.</p>
+                <p class="article-p">If no: you now know what question to ask.</p>
+            </div>
+
+            <!-- AUTHOR -->
+            <div class="article-author">
+                <p class="article-author-name"><a href="https://www.linkedin.com/in/peteridah" target="_blank" rel="noopener">Peter Idah</a></p>
+                <p class="article-author-sub">I help founders build companies that compound. <a href="https://theagenticfounder.com">theagenticfounder.com</a></p>
+            </div>
+
+            <!-- SOURCES -->
+            <div class="sources-section">
+                <p class="sources-label">Sources</p>
+                <ol class="sources-list">
+                    <li id="source-1">[1] Bloomberry, <a href="https://bloomberry.com/blog/i-analyzed-1000-forward-deployed-engineer-jobs-what-i-learned/" target="_blank" rel="noopener">I analyzed 1000 forward deployed engineering jobs</a>, November 2025.</li>
+                    <li id="source-2">[2] TechCrunch, <a href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/" target="_blank" rel="noopener">Microsoft launches its own AI deployment company with $2.5 billion commitment</a>, July 2, 2026.</li>
+                    <li id="source-3">[3] Reuters via Investing.com, <a href="https://www.investing.com/news/stock-market-news/amazons-aws-commits-1-billion-toward-new-unit-for-embedded-ai-engineers-4768286" target="_blank" rel="noopener">Amazon's AWS commits $1 billion toward new unit for embedded AI engineers</a>, June 30, 2026.</li>
+                    <li id="source-4">[4] OpenAI, <a href="https://openai.com/index/openai-launches-the-deployment-company/" target="_blank" rel="noopener">OpenAI launches the Deployment Company</a>, May 2026. Acquisition of Tomoro (Edinburgh). OpenAI Presence managed service announced July 22, 2026.</li>
+                    <li id="source-5">[5] Deloitte, <a href="https://www.deloitte.com/us/en/services/consulting/articles/announcing-forward-deployed-engineering.html" target="_blank" rel="noopener">Announcing Forward Deployed Engineering</a>, December 1, 2025.</li>
+                    <li id="source-6">[6] BCG / HBR, <a href="https://hbr.org/2026/02/look-for-new-ways-to-create-value-when-deploying-gen-ai" target="_blank" rel="noopener">Look for New Ways to Create Value When Deploying Gen AI</a>, February 2026. Study of 800 public companies.</li>
+                </ol>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- FINAL QUESTION -->
+    <section class="final-question-section">
+        <div class="container container-narrow">
+            <p class="fq-label">The one question that settles everything</p>
+            <p class="fq-question">After this deployment, what will be different about the product?</p>
+            <div class="fq-body">
+                <p>Not will the customer be happy. Not will the contract renew.</p>
+                <p>What will be different about the product.</p>
+                <p>If nobody can answer that, the function is in step one. Generating revenue, burning engineers, building nothing that compounds.</p>
+                <p>If someone can answer it specifically, with a direct connection between what the FDE found and what is now being built, the function is compounding. The pain is the moat.</p>
+                <p>Ask it of every deployment. Ask it before you hire. Ask it before you take the role.</p>
+                <p>The companies getting this right are building something that gets harder to compete with every time an engineer comes back from the field. The companies getting it wrong are funding the most expensive bodyshop in the history of enterprise software.</p>
+                <p class="fq-close">You now know which one you are in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section class="article-subscribe">
+        <div class="container container-narrow">
+            <p class="section-label">The Writing</p>
+            <p>I publish a short note on what I'm seeing in the field. If this was useful, you can subscribe.</p>
+            <a href="https://peteridah.substack.com" class="btn btn-primary">Subscribe &rarr;</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <p class="footer-name">The Agentic Founder</p>
+                    <p class="footer-tagline">Find the dependency. Fix it. Build from there.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="/#problem">The Problem</a>
+                    <a href="/#thesis">The Argument</a>
+                    <a href="/#work">The Work</a>
+                    <a href="/#about">About</a>
+                    <a href="mailto:peter@theagenticfounder.com">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-base">
+                <p>&copy; 2026 The Agentic Founder</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const bar = document.getElementById('readingProgress');
+        const article = document.getElementById('article-top');
+
+        function updateProgress() {
+            const articleTop = article.offsetTop;
+            const articleHeight = article.offsetHeight;
+            const scrolled = window.scrollY - articleTop;
+            const total = articleHeight - window.innerHeight;
+            const pct = Math.min(Math.max(scrolled / total, 0), 1);
+            bar.style.width = (pct * 100) + '%';
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+    </script>
+
+</body>
+</html>
