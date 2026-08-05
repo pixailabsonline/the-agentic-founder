@@ -277,6 +277,26 @@ em { font-style: italic; color: var(--ink); }
     text-align: center;
 }
 
+.pullquote-section blockquote cite {
+    display: block;
+    margin-top: 1rem;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+}
+
+#proof blockquote {
+    font-size: 1rem;
+    text-align: left;
+}
+
+#proof blockquote cite {
+    margin-top: 0.5rem;
+}
+
 /* ─── Thesis ─────────────────────────────────────────────── */
 
 .thesis { border-bottom: 1px solid var(--rule); }
