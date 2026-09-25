@@ -559,6 +559,33 @@ body{font-family:var(--sans);color:var(--ink);background:white}
 .footer{background:#0c1b2d;color:#bac9d8}.footer .container{width:min(90%,1160px)}.footer-name{font-family:var(--sans);font-weight:700;color:#fff}
 @media(max-width:720px){.nav-container{height:65px}.nav-links,.nav-book{display:none}.nav-mobile{background:#fff;border-top:1px solid var(--rule)}.article-header .container{padding-top:55px;padding-bottom:45px}.article-section{margin-top:2.7rem;padding-top:2.7rem}.footer-inner{flex-direction:column;gap:1rem}}
 </style>
+<style id="fde-layout-fix">
+/* The current site uses .wrap, while this article was built with .container.
+   Give the article its own centered layout instead of relying on removed legacy CSS. */
+body{overflow-x:hidden}
+.article-header .container,.article-body .container,.final-question-section .container,.article-subscribe .container{width:min(90%,760px);max-width:760px;margin-inline:auto}
+.footer .container{width:min(90%,1160px);max-width:1160px;margin-inline:auto}
+.article-header,.article-body,.final-question-section,.article-subscribe{width:100%}
+.article-body img,.article-body svg,.article-body video,.article-body iframe{max-width:100%;height:auto}
+.article-body p,.article-body li{overflow-wrap:break-word}
+.steps-visual,.archetype-bar-wrap,.interview-qs,.article-blockquote{max-width:100%;min-width:0}
+.steps-visual>*{min-width:0}
+.article-body .article-title{max-width:100%}
+.nav .nav-container{width:min(90%,1160px);max-width:1160px;margin-inline:auto}
+.nav .nav-links{list-style:none;padding:0;display:flex;align-items:center}
+.nav .nav-links li{margin:0}
+.nav .nav-mobile{width:100%}
+.footer-inner{display:flex;align-items:start;justify-content:space-between;gap:2rem}
+.footer-nav{display:flex;flex-wrap:wrap;gap:1rem}
+@media(max-width:720px){
+.article-header .container,.article-body .container,.final-question-section .container,.article-subscribe .container{width:min(90%,760px)}
+.nav .nav-links{display:none}
+.nav .nav-mobile{display:none}
+.nav.mobile-open .nav-mobile{display:flex;flex-direction:column}
+.steps-visual{grid-template-columns:1fr}
+.footer-inner{flex-direction:column}
+}
+</style>
 </head>
 <body>
 
