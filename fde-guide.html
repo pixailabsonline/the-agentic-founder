@@ -7,7 +7,7 @@
     <meta name="description" content="Job postings grew 800% in a year. $7 billion committed in six months. And the structural mistake almost everyone is making. A complete guide to what the FDE role actually is.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,450;6..72,550&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
 
@@ -533,6 +533,32 @@
         }
 
     </style>
+<style>
+/* Shared Agentic Founder visual language; editorial overrides */
+:root{--navy:#12243a;--ink:#1d2a37;--ink-mid:#435369;--ink-muted:#64758a;--ink-faint:#9aabba;--rule:#d6dfe6;--paper:#fff;--paper-off:#f5f6f5;--accent:#275b87;--accent-light:#eaf1f6;--serif:'Newsreader',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+body{font-family:var(--sans);color:var(--ink);background:white}
+.nav{background:rgba(255,255,255,.97);border-bottom:1px solid var(--rule)}
+.nav-container{width:min(90%,1160px);max-width:1160px;height:74px;margin:auto;display:flex;align-items:center;gap:2rem}
+.nav-logo{font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:0;color:var(--navy)}
+.nav-logo:before{content:'AF';display:inline-grid;place-items:center;background:var(--navy);color:#fff;width:35px;height:35px;font-size:.7rem;margin-right:.8rem;vertical-align:middle}
+.nav-links{margin-left:auto;gap:2rem}.nav-links a,.nav-book{font-size:.82rem;font-weight:600;color:var(--navy)}.nav-book{border:1px solid var(--navy);padding:.6rem .9rem}
+.article-header{border-bottom:1px solid var(--rule)}.article-header .container{padding-top:90px;padding-bottom:65px}
+.article-meta{font-family:var(--sans);font-weight:700;color:var(--accent)}
+.article-title{font:500 clamp(3rem,6vw,5.5rem)/1.07 var(--serif);letter-spacing:-.025em;color:var(--navy);max-width:750px}
+.article-body .container{padding-top:60px}.article-p{font:400 1.04rem/1.85 var(--sans);color:var(--ink-mid)}.article-p strong{font-weight:700;color:var(--navy)}
+.article-section{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:3.5rem}
+.article-h2{font:500 clamp(2rem,3.5vw,3rem)/1.15 var(--serif);letter-spacing:-.02em;color:var(--navy);max-width:750px}
+.pull-quote p{font:500 clamp(1.35rem,2.5vw,1.8rem)/1.45 var(--serif);color:var(--navy)}
+.pivot-moment p{font:500 clamp(1.8rem,4vw,2.6rem)/1.2 var(--serif);color:var(--navy)}
+.step-card{background:#f6f8f9}.step-card-two{background:#eaf1f6}.step-title{font-weight:700;color:var(--navy)}.step-num{font-family:var(--serif)}
+.article-blockquote{border-left-color:var(--navy)}.article-blockquote p{font:500 1.3rem/1.5 var(--serif)}
+.arch-seg-builder,.arch-dot-builder{background:var(--accent)}.arch-seg-sales,.arch-dot-sales{background:#61788d}.arch-seg-internal,.arch-dot-internal{background:#b1beca}
+.interview-q{font:500 1.15rem/1.55 var(--serif)}.check-num{font:500 1.4rem var(--serif)}
+.final-question-section{background:var(--navy)}.fq-question{font:500 clamp(2rem,4vw,3.3rem)/1.15 var(--serif)}
+.article-subscribe{background:var(--paper-off)}.article-subscribe .btn{background:var(--navy);color:#fff}
+.footer{background:#0c1b2d;color:#bac9d8}.footer .container{width:min(90%,1160px)}.footer-name{font-family:var(--sans);font-weight:700;color:#fff}
+@media(max-width:720px){.nav-container{height:65px}.nav-links,.nav-book{display:none}.nav-mobile{background:#fff;border-top:1px solid var(--rule)}.article-header .container{padding-top:55px;padding-bottom:45px}.article-section{margin-top:2.7rem;padding-top:2.7rem}.footer-inner{flex-direction:column;gap:1rem}}
+</style>
 </head>
 <body>
 
@@ -540,22 +566,22 @@
 
     <nav class="nav" id="nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo">The Agentic Founder</a>
+            <a href="/" class="nav-logo">Agentic Founder</a>
             <ul class="nav-links">
-                <li><a href="/#work">The Work</a></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/#newsletter">Writing</a></li>
+                <li><a href="/#the-work">The Work</a></li>
+                <li><a href="/#why-me">About</a></li>
+                <li><a href="/#offer">Writing</a></li>
             </ul>
-            <a href="/#work" class="nav-book">Start the conversation</a>
+            <a href="/#the-work" class="nav-book">Start the conversation</a>
             <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
         <div class="nav-mobile">
-            <a href="/#work">The Work</a>
-            <a href="/#about">About</a>
-            <a href="/#newsletter">Writing</a>
-            <a href="/#work" class="nav-mobile-cta">Start the conversation</a>
+            <a href="/#the-work">The Work</a>
+            <a href="/#why-me">About</a>
+            <a href="/#offer">Writing</a>
+            <a href="/#the-work" class="nav-mobile-cta">Start the conversation</a>
         </div>
     </nav>
 
@@ -804,7 +830,7 @@
             <!-- AUTHOR -->
             <div class="article-author">
                 <p class="article-author-name"><a href="https://www.linkedin.com/in/peteridah" target="_blank" rel="noopener">Peter Idah</a></p>
-                <p class="article-author-sub">I help founders build companies that compound. <a href="https://theagenticfounder.com">theagenticfounder.com</a></p>
+                <p class="article-author-sub">Founder of Agentic Founder. Applied AI delivery for defined business outcomes. <a href="https://theagenticfounder.com">theagenticfounder.com</a></p>
             </div>
 
             <!-- SOURCES -->
@@ -854,13 +880,13 @@
             <div class="footer-inner">
                 <div class="footer-brand">
                     <p class="footer-name">The Agentic Founder</p>
-                    <p class="footer-tagline">Find the dependency. Fix it. Build from there.</p>
+                    <p class="footer-tagline">Applied AI delivery · Fixed-outcome implementation · UK</p>
                 </div>
                 <nav class="footer-nav" aria-label="Footer navigation">
-                    <a href="/#problem">The Problem</a>
-                    <a href="/#thesis">The Argument</a>
-                    <a href="/#work">The Work</a>
-                    <a href="/#about">About</a>
+                    <a href="/#the-work">The Problem</a>
+                    <a href="/#offer">The Argument</a>
+                    <a href="/#the-work">The Work</a>
+                    <a href="/#why-me">About</a>
                     <a href="mailto:peter@theagenticfounder.com">Contact</a>
                 </nav>
             </div>
@@ -880,7 +906,7 @@
             const articleHeight = article.offsetHeight;
             const scrolled = window.scrollY - articleTop;
             const total = articleHeight - window.innerHeight;
-            const pct = Math.min(Math.max(scrolled / total, 0), 1);
+            const pct = total > 0 ? Math.min(Math.max(scrolled / total, 0), 1) : 0;
             bar.style.width = (pct * 100) + '%';
         }
 
