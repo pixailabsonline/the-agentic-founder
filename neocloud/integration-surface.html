@@ -1,93 +1,276 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>You Found the GPUs. Now Comes the Hard Part. | Agentic Founder</title><meta name="description" content="Buying specialist AI compute is easier than integrating it. A definitive enterprise guide to specialist GPU integration: identity, data, security, orchestration, cost, resilience and a practical path to production."><link rel="canonical" href="https://theagenticfounder.com/neocloud/integration-surface"><link rel="stylesheet" href="../style.css"><style>.article{max-width:780px;margin:auto;padding:64px 5% 80px}.article h1,.article h2,.article blockquote{font-family:Georgia,serif}.article h1{font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.07;letter-spacing:-.03em;margin:0 0 1.3rem}.article h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.15;margin:3.5rem 0 1rem}.article p,.article li{font-size:1.07rem;line-height:1.78;color:#34485c}.article p{margin-bottom:1.25rem}.article strong{color:#102236}.article .lead{font-size:1.4rem;line-height:1.5;color:#203b53}.article .eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#477b8d}.article blockquote{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.3;border-left:4px solid #39896e;margin:2.5rem 0;padding:.4rem 1.2rem;color:#102236}.article .decision-box{background:#f2f7f5;border-left:3px solid #39896e;padding:1rem 1.3rem;margin:2rem 0}.article li{margin-bottom:1rem}.article .conversion{background:#102236;padding:2rem;border-radius:8px;margin:4rem 0 2rem}.article .conversion h2{color:white;margin:0 0 1rem}.article .conversion p{color:#e1eaf1}.article .conversion .action{display:inline-block;background:white;color:#102236;font-weight:bold;padding:.85rem 1.2rem;text-decoration:none;border-radius:4px}.article .conversion small{color:#c1d2df}.article .sources{font-size:.84rem;color:#66798c}.article a{color:#23765c}.article .conversion a{color:#102236}@media(max-width:600px){.article{padding:38px 6% 60px}.article .conversion{padding:1.4rem}}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"You Found the GPUs. Now Comes the Hard Part.","author":{"@type":"Person","name":"Peter Idah"},"datePublished":"2026-09-26","publisher":{"@type":"Organization","name":"Agentic Founder"}}</script></head><body><a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="/"><span class="brand-mark">AF</span>Agentic Founder</a><div class="nav-links"><a href="/neocloud/">Neocloud</a><a href="/">Home</a></div><a class="nav-cta" href="mailto:peter@theagenticfounder.com?subject=Neocloud%20integration">Talk to Peter &#8599;</a></div></nav><main id="main"><article class="article"><p class="eyebrow">Enterprise AI infrastructure · 26 September 2026</p>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>You Found the GPUs. Now Comes the Hard Part. | Agentic Founder</title><meta name="description" content="Buying specialist AI compute is easier than integrating it. The definitive enterprise guide to specialist GPU integration: identity, data, security, orchestration, cost, resilience and a practical path to production."><link rel="canonical" href="https://theagenticfounder.com/neocloud/integration-surface"><link rel="stylesheet" href="../style.css"><style>.article{max-width:780px;margin:auto;padding:64px 5% 80px}.article h1,.article h2,.article blockquote{font-family:Georgia,serif}.article h1{font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.07;letter-spacing:-.03em;margin:0 0 1.3rem}.article h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.15;margin:3.5rem 0 1rem}.article p,.article li{font-size:1.07rem;line-height:1.78;color:#34485c}.article p{margin-bottom:1.25rem}.article strong{color:#102236}.article .lead{font-size:1.4rem;line-height:1.5;color:#203b53}.article .eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#477b8d}.article blockquote{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.3;border-left:4px solid #39896e;margin:2.5rem 0;padding:.4rem 1.2rem;color:#102236}.article .decision-box{background:#f2f7f5;border-left:3px solid #39896e;padding:1rem 1.3rem;margin:2rem 0}.article .decision-box p{margin-bottom:.5rem;font-size:.96rem}.article .decision-box p:last-child{margin-bottom:0}.article li{margin-bottom:1rem}.article .diagram{background:#f5f7f8;border:1px solid #d6dfe6;padding:1.4rem 1.6rem;margin:1.5rem 0 2rem;font-family:'DM Sans',monospace;font-size:.8rem;line-height:1.7;overflow-x:auto;white-space:pre;color:#102236}.article .diagram strong{color:#23765c}.article .source-note{font-size:.84rem;color:#66798c;margin-top:-.4rem;margin-bottom:1.3rem}.article .mid-cta{background:#f8faf9;border:1px solid #cde0d6;padding:1.3rem 1.5rem;margin:2.5rem 0;border-radius:6px}.article .mid-cta p{margin-bottom:.5rem;font-size:.95rem;color:#34485c}.article .mid-cta a{color:#23765c;font-weight:700;text-decoration:underline;text-underline-offset:3px}.article .conversion{background:#102236;padding:2rem;border-radius:8px;margin:4rem 0 2rem}.article .conversion h2{color:white;margin:0 0 1rem}.article .conversion p{color:#e1eaf1}.article .conversion .action{display:inline-block;background:white;color:#102236;font-weight:bold;padding:.85rem 1.2rem;text-decoration:none;border-radius:4px}.article .conversion small{color:#c1d2df}.article .sources{font-size:.84rem;color:#66798c}.article a{color:#23765c}.article .conversion a{color:#102236}.article ol{margin:0 0 1.5rem 1.4rem;padding:0}.article ul{margin:0 0 1.5rem 1.4rem;padding:0}@media(max-width:600px){.article{padding:38px 6% 60px}.article .conversion{padding:1.4rem}.article .diagram{font-size:.7rem;padding:1rem}}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"You Found the GPUs. Now Comes the Hard Part.","author":{"@type":"Person","name":"Peter Idah"},"datePublished":"2026-09-26","publisher":{"@type":"Organization","name":"Agentic Founder"}}</script></head><body><a class="skip" href="#main">Skip to content</a><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="/"><span class="brand-mark">AF</span>Agentic Founder</a><div class="nav-links"><a href="/neocloud/">Neocloud</a><a href="/">Home</a></div><a class="nav-cta" href="mailto:peter@theagenticfounder.com?subject=Neocloud%20integration">Talk to Peter &#8599;</a></div></nav><main id="main"><article class="article"><p class="eyebrow">Enterprise AI infrastructure · 26 September 2026</p>
+
 <h1>You found the GPUs.<br>Now comes the hard part.</h1>
+
 <p class="lead">The deal looks compelling. The hardware is available. Your researchers are ready. But who will make this new cloud work inside the business you already run?</p>
+
 <p>You've found the capacity your AI team has been asking for. Perhaps CoreWeave has the right cluster. Perhaps Nebius offers the region or economics you need. Perhaps Crusoe has hardware your existing provider cannot supply when you need it.</p>
+
 <p>For the first time in months, the compute problem looks solvable.</p>
-<p>Then your platform engineering lead asks: <strong>“How does this work with everything we already have?”</strong></p>
-<p>Your data is in AWS, Azure or Google Cloud. Your developers use established tools. Your security team has spent years getting identity, permissions and audit under control. Your platform engineers already support more systems than they have time for.</p>
-<p>Now the business wants another cloud.</p>
-<blockquote>The provider can deliver the GPUs. It cannot automatically make them part of your organisation.</blockquote>
-<p>This is the risk hidden inside an otherwise sound infrastructure decision. It is also the opportunity: get the integration right, and the next compute decision becomes much easier.</p>
+
+<p>Then your platform engineering lead asks: <strong>"How does this work with everything we already have?"</strong></p>
+
+<p>That question is the beginning of a project most organisations underestimate. Not because the technology is impossible, but because the integration surface between a specialist GPU cloud and an existing enterprise environment is larger, more consequential and less documented than any provider will tell you before the contract is signed.</p>
+
+<p>This article maps that surface. I'm writing it from inside the work — I'm currently delivering this kind of integration at a leading London hedge fund. Every section describes a real obstacle that appears in a predictable sequence. I've structured it as a narrative because that's how the work actually unfolds: each problem reveals the next, and the decisions you make early constrain what's possible later.</p>
+
+<div class="diagram">
+<strong>PROVIDER SIDE</strong>                    <strong>BOUNDARY</strong>                        <strong>CUSTOMER SIDE</strong>
+
+Physical GPUs, networking,          ←→  Provider API / Kubernetes API   Your existing cloud estate
+InfiniBand/Ethernet fabric                                              (AWS, GCP, Azure)
+
+Managed Kubernetes or Slurm         ←→  kubeconfig, RBAC, namespaces    Your identity provider
+                                                                        (Okta, Entra ID, etc.)
+
+Provider storage                    ←→  Storage mounts, data paths      Your data platform
+(object, block, parallel FS)                                            (S3, GCS, on-prem NAS)
+
+Provider network fabric             ←→  VPN / Interconnect / Peering    Your VPC, firewalls,
+                                                                        security groups, DNS
+
+Provider IAM primitives             ←→  OIDC/SAML federation, SCIM      Your IAM policies,
+                                                                        groups, service accounts
+
+Provider monitoring endpoints       ←→  Metrics export, log forwarding  Your observability stack
+
+Provider billing data               ←→  Billing API / usage reports     Your cost management
+
+————————————————————————————————————————————————————————
+
+<strong>WHOLLY CUSTOMER-OWNED (provider has no visibility or responsibility)</strong>
+
+Cross-provider workload routing     (SkyPilot, custom platform, or manual)
+Quota, admission, scheduling        (Kueue per cluster, or equivalent)
+Distributed runtimes                (Ray, PyTorch Distributed, DeepSpeed)
+Experiment tracking                 (W&amp;B, MLflow, Neptune)
+Reproducibility infrastructure      (pinned images, versioned data, seed management)
+Secrets management                  (Vault, cloud KMS, or equivalent)
+Incident response and on-call       (your runbooks, your people)
+</div>
+
+<p>Everything below the line is yours regardless of which provider you choose. The provider manages infrastructure up to a Kubernetes API or Slurm endpoint. Everything above that — who can access it, how data gets there, how costs are tracked, how failures are handled — is customer-side work. This is not a criticism of any provider. It is the nature of integrating an entirely separate infrastructure estate.</p>
+
 <h2>The savings are real. So is the cost of reaching them.</h2>
+
 <p>Specialist GPU providers can offer better pricing, more capacity, newer hardware and geographic choice. For the right workload, the economics are compelling. But the number on the rate card is not the number your business experiences.</p>
+
 <p>Imagine committing to a cluster because it promises substantial savings. The contract starts. The GPUs are ready. Then the work begins.</p>
-<p>Security needs to approve the network. Engineers must connect your identity provider. Training data needs a secure path into the environment. Monitoring is incomplete. Nobody has agreed who takes the call when a job fails at 2am.</p>
+
+<p>Security needs to approve the network path. Engineers must federate your identity provider. Training data needs a secure route into the environment. Monitoring is incomplete. Nobody has agreed who takes the call when a job fails at 2am.</p>
+
 <p>Meanwhile, you're paying for capacity your researchers cannot fully use.</p>
+
 <p><strong>The provider has delivered what it sold. Your business hasn't yet realised what it bought.</strong></p>
-<p>The right calculation isn't simply cost per GPU-hour. It's cost per useful, completed workload, including data movement, utilisation, engineering effort and ongoing operations. Make that calculation before an attractive infrastructure quote becomes a disappointing business case.</p>
-<h2>Your platform team inherits another infrastructure estate.</h2>
-<p>The request sounds small: establish connectivity, configure access and get a training job running.</p>
-<p>But a researcher needs to sign in through your existing identity system. The workload needs permission to read your data without embedding permanent credentials. Security needs to see who accessed what. Finance needs to attribute spend. Operations needs to distinguish an application failure from a network or provider incident.</p>
-<p>For a regulated business, add data location, administrative access, audit retention and recovery.</p>
-<p>These are familiar engineering problems. The difficult part is making them work together across infrastructure you don't fully control, without creating a second operating model your team must maintain forever.</p>
-<div class="decision-box"><p><strong>The boundary that matters:</strong> Your provider supplies its GPUs, networking, storage, APIs and contracted managed services. Your organisation must still connect those services to its access model, approved data flows, workload delivery, cost ownership and operations. The exact division varies by provider and contract. Establish it before the first incident, not during it.</p></div>
+
+<p>The right calculation isn't cost per GPU-hour. It's cost per useful, completed workload — including data movement, integration engineering, utilisation losses and ongoing operations. Make that calculation before an attractive infrastructure quote becomes a disappointing business case.</p>
+
 <h2>The first wall: your identity system stops at the new cloud.</h2>
-<p>Your researchers already sign in through Microsoft Entra, Okta or another established identity provider. Their groups determine what they can access. Security can disable accounts and review activity. A separate GPU-cloud account may get the first experiment running quickly, but what happens when twenty researchers join, one leaves or auditors need to reconstruct access?</p>
-<p>Enterprise federation matters. Providers including CoreWeave and Nebius document identity integration, but support for federation is not the same as reproducing your access model. Groups still need mapping to appropriate permissions; researchers should not automatically become cluster administrators; workloads should not inherit unrestricted human credentials.</p>
-<p>The hardest question often arrives after the researcher has signed in: <strong>how does a workload running on a specialist GPU cluster authenticate to S3, your internal data platform or your existing secrets manager?</strong> Where supported, workload identity federation avoids distributing long-lived cloud credentials. Otherwise, engineers need a controlled alternative with rotation and revocation.</p>
+
+<p>Your researchers already sign in through Microsoft Entra, Okta or another established identity provider. Their groups determine what they can access. Security can disable accounts and review activity.</p>
+
+<p>A separate GPU-cloud account may get the first experiment running quickly. But what happens when twenty researchers need access, one leaves the company, or auditors need to reconstruct six months of access history?</p>
+
+<p><strong>CoreWeave</strong> has built the most developed enterprise identity story among the specialist providers. Their IAM federates over SAML and OIDC with named support for Okta and Microsoft Entra. Users and groups sync continuously from your IdP via SCIM. Their SUNK User Provisioning automatically creates POSIX users on Slurm clusters when a federated user arrives — the claim is that adding a researcher to a group in Entra results in SSH access within a minute, with the correct UID, GID and permissions. Their Remote Key Encryption, announced but not yet generally available, will allow encryption keys to remain in the customer's own key store.</p>
+
+<p class="source-note">Source: CoreWeave blog, "Bringing Enterprise Identity and Key Control to AI on CoreWeave", September 2026.</p>
+
+<p><strong>Nebius</strong> supports SAML-based SSO, service accounts and group-based authorisation. <strong>Crusoe</strong> offers ISO 27001, SOC 2 Type II and GDPR alignment with customer-managed encryption keys. Both have thinner documentation on enterprise federation specifics than CoreWeave.</p>
+
+<p>But support for federation is not the same as reproducing your access model. Even after federation works, several problems remain yours:</p>
+
+<ul>
+<li><strong>Group and role mapping.</strong> Your IdP groups must map to meaningful RBAC roles in the new Kubernetes clusters. AWS IAM roles, GCP service accounts and Azure managed identities don't transfer. You need a mapping layer.</li>
+<li><strong>Workload identity.</strong> A training job on CoreWeave that reads from your S3 bucket needs credentials. Distributing long-lived AWS access keys into another provider's cluster is a security incident waiting to happen. Workload identity federation — where a Kubernetes service account in one cloud assumes a role in another without static credentials — is the right pattern, but it requires configuration on both sides.</li>
+<li><strong>Secrets distribution.</strong> If you use Vault or a cloud secrets manager, workloads on the specialist cloud need to reach it. The External Secrets Operator for Kubernetes can bridge the gap, but it must be deployed and configured in every cluster.</li>
+<li><strong>Audit trail unification.</strong> Your security team needs a single view of who accessed what, across both environments. CoreWeave's Telemetry Relay can forward logs to a customer SIEM. The schema mapping and correlation is your problem.</li>
+<li><strong>Break-glass access.</strong> When something goes wrong at 3am, your on-call engineer needs access that works, is auditable and doesn't require a separate set of credentials nobody remembers.</li>
+</ul>
+
 <p>Test the whole lifecycle: onboarding, permission changes, audit-log correlation, emergency access and removal. Disabling an enterprise account should not leave forgotten credentials behind.</p>
+
+<div class="decision-box">
+<p><strong>Key decision:</strong> Federate your IdP to the specialist provider, or maintain a separate identity boundary with synchronisation?</p>
+<p>Federation is cleaner but requires the provider to support your IdP's protocols and group hierarchy. A separate boundary is simpler initially but creates ongoing drift, stale-access risk and audit gaps. For most enterprises, federation is the right choice — but verify it handles your conditional access policies before committing.</p>
+</div>
+
 <h2>The second wall: the GPUs are ready, but your data is somewhere else.</h2>
-<p>Identity gets researchers through the door. Then the first real workload needs its training data, perhaps several terabytes sitting in your existing cloud. Do you read it remotely, replicate it or stage it before each run? The answer changes performance, reliability, storage costs and the economics of the deal.</p>
-<div class="decision-box"><p><strong>Read remotely:</strong> minimise duplication, but measure latency, throughput and repeated transfer costs.</p><p><strong>Replicate frequently used data:</strong> improve locality, but own synchronisation, versioning, deletion and additional storage.</p><p><strong>Stage data per workload:</strong> useful for discrete experiments, provided your platform manages transfer time, temporary storage, cleanup and dataset provenance.</p></div>
-<p>A VPN may be sufficient for the first job, but will it sustain several teams moving large datasets? Do you need dedicated connectivity? Can the provider resolve your internal DNS names? Which routes, firewall rules and egress restrictions apply? What happens when a transfer fails halfway through?</p>
-<p>For EU-sensitive workloads, the location of the GPU cluster is only the beginning. Check where datasets, checkpoints, artefacts, logs and backups reside, and where support staff can access the environment. Residency is an end-to-end property of the workload, not a regional checkbox.</p>
+
+<p>Identity gets researchers through the door. Then the first real workload needs its training data — perhaps several terabytes sitting in your existing cloud.</p>
+
+<p>Shopify's published SkyPilot architecture is the best public example of solving this at scale. Training datasets are replicated across clouds. When a run targets Nebius, data comes from storage within that environment. When it targets GCP, same. They designed for data locality rather than cross-cloud reads.</p>
+
+<p class="source-note">Source: Shopify Engineering, "SkyPilot at Shopify: Multi-cloud GPUs without the pain", January 2026.</p>
+
+<p>This works when datasets change infrequently and don't fall under residency restrictions that prevent replication. The operational cost is synchronisation, versioning and paying for storage in multiple locations.</p>
+
+<p>CoreWeave's LOTA Cross-Cloud claims near-local throughput of up to 7 GB/s per GPU for data stored elsewhere — removing the need for replication but creating a dependency on CoreWeave's caching infrastructure. It was in limited availability for Google Cloud workloads as of September 2026.</p>
+
+<p>Without data locality or a product like LOTA, you're reading across a VPN. For TB-scale training datasets, the data loading bottleneck will dominate your GPU utilisation. A VPN may be sufficient for the first job, but will it sustain several teams moving large datasets? Do you need dedicated connectivity?</p>
+
+<p>CoreWeave's Interconnect provides private fibre to Google Cloud via Partner Cross-Cloud Interconnect, with MACsec encryption and zero egress fees across their backbone. For other cloud pairings — CoreWeave to AWS, Nebius to Azure — the options today are site-to-site VPN or colocation cross-connects, with the associated latency and management overhead.</p>
+
+<div class="decision-box">
+<p><strong>Replicate:</strong> Best locality. Own synchronisation, versioning, deletion and additional storage costs.</p>
+<p><strong>Remote access:</strong> Minimise duplication. Measure latency, throughput and repeated transfer costs. Evaluate LOTA or equivalent where available.</p>
+<p><strong>Stage per workload:</strong> Useful for discrete experiments. Manage transfer time, temporary storage, cleanup and dataset provenance.</p>
+<p>Your answer depends on dataset size, change frequency, latency sensitivity and residency obligations. If you haven't modelled your actual data access patterns, you will discover the wrong answer in production.</p>
+</div>
+
+<p>For EU-sensitive workloads, the location of the GPU cluster is only the beginning. Check where checkpoints, model artefacts, logs and backups reside. Establish where support staff can access the environment. Verify the provider's subprocessor chain. Residency is an end-to-end property of the workload, not a regional checkbox.</p>
+
+<div class="mid-cta">
+<p><strong>This is where most teams discover the integration takes longer than the procurement.</strong> If your platform engineers are already committed to other work, this is the kind of engagement we run — one real workload, your existing estate, a defined route to production.</p>
+<p><a href="/neocloud/">See how the engagement works →</a></p>
+</div>
+
 <h2>The first security review is where the demo meets the enterprise.</h2>
+
 <p>A researcher can train a model on a new cluster with a small dataset and temporary credentials. That proves technical feasibility. It doesn't establish readiness for sensitive workloads.</p>
+
 <p>Imagine a financial firm evaluating EU-hosted compute. The hardware fits. The research team is happy. Then security asks where the checkpoints go. Legal asks whether support staff outside the region can access the environment. Platform engineering asks how workloads authenticate to existing data. Operations asks where the audit logs will live.</p>
-<p>“The GPUs are in the EU” doesn't answer those questions. Nor does a provider's compliance certificate replace your own architecture review.</p>
-<p>Providers are improving. CoreWeave has published enterprise identity and key-control capabilities. But those features still need to be integrated with your groups, workload permissions, network policies and audit requirements.</p>
+
+<p>"The GPUs are in the EU" doesn't answer those questions. Nor does a provider's compliance certificate replace your own architecture review.</p>
+
+<p>Providers are improving. CoreWeave has published enterprise identity and key-control capabilities. Crusoe holds ISO 27001 and SOC 2 Type II. Nebius operates data centres across multiple European locations. But each of those features still needs integration with your groups, workload permissions, network policies and audit requirements.</p>
+
 <p><strong>Don't create a permanent security exception for AI. Bring new compute under the controls your business already trusts.</strong></p>
+
 <h2>Your researchers didn't ask for another cloud. They asked to get more work done.</h2>
-<p>Now the first job runs. Another twenty researchers want access. One team needs a different GPU type; another wants reserved capacity; a third wants to compare the same experiment across providers. Giving everyone direct access shifts provider-specific authentication, storage, quotas and deployment work onto the people you were trying to accelerate.</p>
-<p>The platform should let researchers specify the resources, code and approved data they need. It should handle repetitive infrastructure work while preserving provider-specific controls when necessary.</p>
-<p>SkyPilot can help submit workloads and select providers. Kueue provides Kubernetes admission control and quotas, with MultiKueue supporting dispatch across clusters. Ray, PyTorch Distributed and DeepSpeed address different aspects of distributed execution. They are complementary building blocks, not a substitute for enterprise identity, data access or cost policy.</p>
-<p>Don't introduce every abstraction on day one. A single provider and a small team may need only well-designed job templates. Quotas become important when teams compete for reserved GPUs. Cross-provider routing is useful when you have a real placement decision to automate.</p>
-<h2>Imagine your researchers barely notice the new cloud.</h2>
-<p>They request the compute they need and submit jobs through a familiar workflow. Identity, approved data access, quotas and cost ownership are handled by the platform. They can still use provider-specific features when their work requires them, but they don't have to become experts in every cloud's authentication and networking just to run an experiment.</p>
-<p>Shopify has published how it extended SkyPilot to support GPU workloads across Google Cloud and Nebius. The important work wasn't just sending jobs to different clusters. Shopify expressed its own scheduling, configuration and cost-ownership requirements as reusable platform capabilities.</p>
-<p><strong>A scheduler can send a job to another cloud. Your platform must make that job fit your organisation.</strong></p>
-<p>The tool might be SkyPilot, your existing job templates or another orchestration approach. The outcome matters more: researchers get useful compute without creating a new integration project every time.</p>
+
+<p>Now the first job runs. Another twenty researchers want access. One team needs a different GPU type; another wants reserved capacity; a third wants to compare the same experiment across providers.</p>
+
+<p>Giving everyone direct access shifts provider-specific authentication, storage, quotas and deployment work onto the people you were trying to accelerate.</p>
+
+<p>Shopify's answer is instructive. Their custom SkyPilot routing plugin intercepts every job request before it reaches a cluster. H200 requests go to Nebius. L4 or CPU-only work goes to GCP. Explicit overrides are available when needed. As their engineering blog puts it: <em>"The core insight is that you can intercept every request before it gets to a cluster and do whatever you want with it."</em></p>
+
+<p>They also enforce a <code>showback_cost_owner_ref</code> label on every job. If a workload doesn't carry an owner tag, it doesn't run. Their blog describes this as "annoying but it means we actually know where our GPU spend goes." Teams get cost dashboards that enable self-correction, and a GPU reaper terminates jobs running below 20% utilisation.</p>
+
+<p>The platform lets researchers specify compute requirements, code and data in YAML. Provider-specific configuration — InfiniBand setup on Nebius, storage paths, CUDA versions — is injected automatically. The researcher writes <code>accelerators: H200:8</code> and the platform handles the rest.</p>
+
+<p>This is worth understanding precisely because it clarifies what you're building. The building blocks are distinct and not interchangeable:</p>
+
+<ul>
+<li><strong>SkyPilot</strong> routes jobs to the right cluster. It operates above the cluster.</li>
+<li><strong>Kueue</strong> admits jobs within a cluster based on quota and priority. It operates inside the cluster. MultiKueue extends dispatch across clusters.</li>
+<li><strong>Ray</strong> is a distributed compute framework. It runs inside a job.</li>
+<li><strong>KubeRay</strong> deploys and manages Ray clusters on Kubernetes.</li>
+</ul>
+
+<p>A complete stack might use SkyPilot to route a job to CoreWeave, Kueue to admit it based on team quota, KubeRay to deploy a Ray cluster, and Ray Train for distributed training within it. Each handles a different concern. Collapsing them into "we use SkyPilot" misrepresents the integration work.</p>
+
+<p>But don't introduce every abstraction on day one. A single provider and a small team may need only well-designed job templates. Quotas become important when teams compete for reserved GPUs. Cross-provider routing is useful when you have a real placement decision to automate.</p>
+
 <h2>Then finance asks a question your monitoring dashboard can't answer.</h2>
-<p>Researchers are running jobs. Utilisation is rising. Finance asks which team consumed the capacity and whether the new provider is delivering the expected savings. The provider has billing data. Kubernetes shows resource usage. Your experiment tracker knows which jobs ran. Those systems may not agree on the cost of a completed experiment.</p>
-<p>A job can occupy eight GPUs for ten hours while spending much of that time waiting on data. Reserved capacity may already be paid for. Restarts and failed experiments consume resources too. Require workload ownership at submission, consistent labels, provider billing integration and telemetry that exposes useful throughput, not just allocation.</p>
-<p>Cost visibility should change behaviour: researchers can right-size jobs, platform engineers can identify idle capacity, and leadership can compare completed-workload economics instead of competing rate cards.</p>
+
+<p>Researchers are running jobs. Utilisation is rising. Finance asks which team consumed the capacity and whether the new provider is delivering the expected savings.</p>
+
+<p>The provider has billing data. Kubernetes shows resource usage. Your experiment tracker knows which jobs ran. Those systems may not agree on the cost of a completed experiment.</p>
+
+<p>A job can occupy eight GPUs for ten hours while spending much of that time waiting on data. Reserved capacity may already be paid for. Restarts and failed experiments consume resources too. As one engineer building GPU monitoring tools noted on Hacker News: <em>"GPU monitoring in multi-cloud environments is woefully insufficient. Teams resort to duct-taping scripts to Prometheus, Grafana and kubectl."</em></p>
+
+<p>What you need to build:</p>
+
+<ul>
+<li><strong>A common labelling convention</strong> enforced at submission time, not after the fact.</li>
+<li><strong>Billing data aggregation</strong> from each provider into your cost management system.</li>
+<li><strong>Showback or chargeback</strong> that works across the combined estate.</li>
+<li><strong>Waste detection.</strong> Idle GPUs on a specialist cloud consume budget silently. Shopify's reaper approach — terminate jobs below a utilisation threshold — is a pattern worth adopting early.</li>
+</ul>
+
+<p>Cost visibility should change behaviour. Researchers right-size jobs. Platform engineers identify idle capacity. Leadership compares completed-workload economics instead of competing rate cards.</p>
+
 <h2>The first serious failure reveals whether you have a platform.</h2>
-<p>A long training job fails overnight. Is it a GPU fault, an interrupted data path, exhausted storage or a provider incident? Can the job resume from a checkpoint? Is that checkpoint accessible in the recovery environment? Can the existing operations team tell which organisation owns the next action?</p>
-<p>Checkpointing reduces lost work only when it is frequent, durable and restorable. Automated recovery requires an understanding of job semantics, available capacity and data location. A portable job specification is not a portable execution environment: GPU architecture, interconnect topology, CUDA versions and storage performance still matter.</p>
-<p>Day-two operations include driver compatibility, certificates, network connectivity, abandoned storage, incident escalation and observability across the complete workload. Provider dashboards are valuable, but your team needs a joined-up picture of application, scheduler, GPU, storage, network and identity.</p>
+
+<p>A long training job fails overnight. Is it a GPU fault, an interrupted data path, exhausted storage or a provider incident? Can the job resume from a checkpoint? Is that checkpoint accessible in the recovery environment? Can the on-call engineer tell which organisation owns the next action?</p>
+
+<p>Provider-side resilience is improving. CoreWeave reports 96% goodput and 50% fewer daily training interruptions than the industry average. AWS SageMaker HyperPod claims up to 95% goodput with sub-2-minute fault recovery. These numbers apply to workloads running within a single provider's managed environment.</p>
+
+<p>When you run across environments, resilience becomes your problem:</p>
+
+<ul>
+<li><strong>Checkpointing.</strong> Your training code must checkpoint at intervals that balance recovery time against I/O overhead. The checkpoint must be stored somewhere accessible for recovery — ideally not only on the provider's local storage.</li>
+<li><strong>Automatic recovery.</strong> SkyPilot's managed spot jobs can recover preempted work on a different cluster. This requires idempotent jobs, accessible data and a configured recovery path.</li>
+<li><strong>Capacity fallback.</strong> If the specialist provider's capacity is exhausted, can the job move to your existing cloud? Only if the right GPU types are available, the data is accessible and the environment is configured. Most organisations can't do this without significant preparation.</li>
+<li><strong>Partial failure in distributed jobs.</strong> A multi-node training run where one node fails is different from a single-node preemption. PyTorch Distributed, DeepSpeed and Ray have different fault tolerance capabilities. Some can recover from partial failures; others require a full restart.</li>
+</ul>
+
+<div class="decision-box">
+<p><strong>Key decision:</strong> What is your recovery time objective for interrupted GPU workloads? A 24-hour training run that restarts from scratch is a 24-hour loss. A job that resumes from a checkpoint loses minutes. The difference is engineering investment in checkpointing, storage and automated recovery — and that investment must happen before the first interruption.</p>
+</div>
+
+<p>Day-two operations extend well beyond failure recovery. GPU driver and CUDA version compatibility, certificate rotation, VPN tunnel maintenance, node pool management, provider API changes, abandoned storage cleanup, monitoring integration — each is a recurring maintenance task your team inherits. Provider dashboards are valuable, but your team needs a joined-up picture of application, scheduler, GPU, storage, network and identity across both environments.</p>
+
+<div class="mid-cta">
+<p><strong>The pattern we see repeatedly:</strong> teams that invest heavily in getting the first workload running, then discover they've built nothing reusable for the second. If you're approaching your first specialist GPU integration and want to get the foundations right, a conversation about scope and sequence costs nothing.</p>
+<p><a href="mailto:peter@theagenticfounder.com?subject=GPU%20integration%20—%20scoping%20conversation">Describe your workload to Peter →</a></p>
+</div>
+
 <h2>Six months later, someone needs to reproduce a result.</h2>
+
 <p>The code and model weights exist. But which dataset version, container image, CUDA and PyTorch versions, GPU type and distributed configuration produced the result? Was the job resumed from a checkpoint? Where are the audit records?</p>
-<p>Experiment trackers such as MLflow and Weights &amp; Biases solve important pieces. Versioned datasets, container registries and infrastructure configuration preserve others. Your integration must connect the evidence across environments so a team can establish what ran, where, with which inputs and under whose authority.</p>
+
+<p>Reproducibility across environments means:</p>
+
+<ul>
+<li><strong>Digest-pinned container images</strong> with exact versions of CUDA, cuDNN, PyTorch and all dependencies. Not <code>latest</code> tags.</li>
+<li><strong>Recorded hardware configuration.</strong> A model trained on 8×H200 with InfiniBand may produce different results on 8×A100 with Ethernet, even with the same code and data.</li>
+<li><strong>Versioned data.</strong> The exact training data used, not a pointer to a mutable dataset.</li>
+<li><strong>Experiment tracking.</strong> Weights & Biases, MLflow or equivalent, configured to record hyperparameters, metrics, hardware and code version from every environment where experiments run.</li>
+<li><strong>Unified audit trails.</strong> Who launched what, when, where, with what access. The combination of provider audit logs and your own experiment tracking creates the full record.</li>
+</ul>
+
+<p>No provider solves reproducibility for you. It is entirely customer-side and gets harder, not easier, when you add a second compute environment.</p>
+
 <h2>The second provider reveals what you really built.</h2>
+
 <p>Suppose your first integration succeeds. Six months later, another team wants different GPUs. A new provider offers better capacity, a more suitable region or a price that changes the economics.</p>
+
 <p>Do you repeat the entire exercise? Another identity configuration. Another deployment process. Another monitoring system. Another cost report. Another operational burden.</p>
+
 <p>Or can you extend what you've already built?</p>
+
 <blockquote>The advantage isn't access to five GPU clouds. It's being able to introduce the next one without rebuilding your engineering organisation around it.</blockquote>
-<p>This doesn't mean every workload should be portable. Large training jobs depend on particular hardware, interconnects, storage and data locality. Moving them indiscriminately can destroy the savings you hoped to achieve.</p>
-<p>What should be reusable is your organisation's ability to evaluate, approve, deploy, observe and operate suitable new infrastructure.</p>
-<h2>The turning point: stop building another cloud and extend your existing platform.</h2>
-<p>Your organisation doesn't need another independent collection of identities, deployment tools, dashboards and runbooks. It needs a way to extend the capabilities it already trusts. Keep your enterprise identity as the source of authority; retain familiar development workflows, security policy, cost attribution and operational visibility. Preserve provider-specific features where they genuinely matter.</p>
-<p>The first integration should solve an immediate capacity or economic problem. Done properly, it also establishes capabilities that make the next integration less expensive and less disruptive.</p>
+
+<p>This doesn't mean every workload should be portable. Large training jobs depend on particular hardware, interconnects, storage and data locality. Moving them indiscriminately can destroy the savings you hoped to achieve. What should be reusable is your organisation's ability to evaluate, approve, deploy, observe and operate suitable new infrastructure.</p>
+
+<h2>What's genuinely hard, what's solved and what sits in between.</h2>
+
+<p>As of September 2026, an honest assessment:</p>
+
+<p><strong>Solved.</strong> Single-provider Kubernetes access. Identity federation to one provider (CoreWeave's SAML/OIDC with Okta and Entra is production-ready; Nebius supports SAML SSO). Basic VPN connectivity. Job scheduling within a cluster via Kueue. Single-provider cost tracking. SkyPilot for cross-provider job routing — Shopify runs it in production.</p>
+
+<p><strong>Partially solved.</strong> Cross-provider identity (you can federate to each provider separately, but no product unifies IAM across AWS + CoreWeave + your on-prem AD). Cross-provider networking (CoreWeave's Google Cloud Interconnect is strong for that pairing; other combinations are VPN or colo cross-connects). Data movement at scale (LOTA is promising but limited availability; Shopify's replication works but is operationally expensive). Unified observability across providers. Multi-cluster quota-aware scheduling (Kueue's MultiKueue plus SkyPilot — possible but requires careful integration).</p>
+
+<p><strong>Genuinely hard.</strong> Unified secrets management across three or more environments. Stateful workload migration with TB-scale checkpoints and topology-specific performance. Unified audit trails joining multiple providers with different schemas and retention policies. Cross-provider capacity management beyond spreadsheets. Kubernetes multi-cluster federation — as one engineer noted on Hacker News, it remains "still unfinished."</p>
+
 <h2>Get one real workload into production. Then make the next one easier.</h2>
+
 <p>The opposite mistake is to recognise this challenge and design an elaborate multi-cloud platform before anyone has run a useful workload. Start smaller, with an outcome the business can recognise.</p>
+
 <ol>
-<li><strong>Choose the workload that justifies the move.</strong> Is the goal lower completed-job cost, faster experiments, available capacity, new hardware or an approved processing location? Establish a baseline.</li>
-<li><strong>Resolve what could stop it.</strong> Identify identity, security, networking, data and residency requirements while they can still influence provider selection and contract terms.</li>
+<li><strong>Choose the workload that justifies the move.</strong> Lower completed-job cost? Faster experiments? Available capacity? Newer hardware? An approved processing location? Establish a baseline you can measure against.</li>
+<li><strong>Resolve what could stop it.</strong> Identity, security, networking, data and residency requirements — while they can still influence provider selection and contract terms.</li>
 <li><strong>Connect it to your existing operating model.</strong> Reuse established developer tools, access controls, monitoring and incident response. Build the missing integration, not another organisation.</li>
 <li><strong>Prove the result under real conditions.</strong> Run the actual workload. Measure useful throughput, total cost, reliability and the effort required to support it.</li>
 <li><strong>Keep what makes the next move easier.</strong> Turn proven identity patterns, job interfaces, cost attribution and operational practices into reusable capabilities. Add wider orchestration only when demand warrants it.</li>
 </ol>
-<p>The first milestone isn't “we have a multi-cloud platform.” It's <strong>“our researchers can run this workload securely, economically and reliably, and our existing team can support it.”</strong></p>
-<h2>Know what to buy, what to integrate and what not to build.</h2>
-<p>Some building blocks are established: Kubernetes scheduling, identity federation, VPN connectivity and experiment tracking have mature patterns, although support varies by provider. Others require organisation-specific integration: workload identity across clouds, consistent cost attribution, shared observability and the policies that determine who can run what.</p>
-<p>Some problems remain intrinsically hard. Large stateful workload migration, cross-provider recovery, consistent governance and preserving distributed-training performance across different GPU interconnects are not solved merely by adding another orchestration tool.</p>
-<p>Use provider services and established tools where they meet your needs. Put your own engineering effort into the integration that reflects your data, policies, research workflows and operating model.</p>
+
+<p>The first milestone isn't "we have a multi-cloud platform." It's <strong>"our researchers can run this workload securely, economically and reliably, and our existing team can support it."</strong></p>
+
 <h2>The next infrastructure advantage is the ability to absorb change.</h2>
+
 <p>New GPU hardware will arrive. Capacity and pricing will move. Providers will expand their regions and enterprise services. Those developments create opportunity only for organisations that can act on them.</p>
+
 <p>If every new provider requires months of engineering, your choices are constrained by your integration backlog. If you have a proven way to introduce compute, you can choose based on the workload, the economics and the business requirement.</p>
+
 <p><strong>The GPUs are the purchase. The ability to put them to work inside your business is the asset.</strong></p>
+
 <div class="conversion"><h2>Found the right GPU provider. Short on the engineering capacity to make it work?</h2>
-<p>I'm Peter Idah. I've spent more than twenty years building software and production infrastructure, including in regulated financial services. Agentic Founder helps organisations integrate specialist GPU compute into their existing cloud, identity, security, data and operational environments.</p>
-<p>We can start with a bounded integration assessment: one real workload, the blockers between you and production, the decisions that need making and a defined route to deployment. If the scope is already clear, we can discuss implementation directly.</p>
-<p><a class="action" href="mailto:peter@theagenticfounder.com?subject=Specialist%20GPU%20integration">Tell me what you're trying to deploy &#8599;</a></p><small>A direct conversation about your workload and the integration work. No generic AI transformation pitch.</small></div>
-<p class="sources"><strong>Further reading:</strong> <a href="https://shopify.engineering/skypilot">Shopify Engineering: SkyPilot at Shopify</a>; <a href="https://kueue.sigs.k8s.io/">Kueue documentation</a>; <a href="https://docs.skypilot.ai/">SkyPilot documentation</a>; <a href="https://www.coreweave.com/blog/bringing-enterprise-identity-and-key-control-to-ai-on-coreweave">CoreWeave: Enterprise Identity and Key Control</a>; <a href="https://docs.nebius.com/">Nebius documentation</a>. Verify provider features and terms for your region and contract.</p></article></main><footer><div class="wrap footer-inner"><a href="/">Agentic Founder</a><span>Neocloud integration · UK</span><span>&copy; 2026 Agentic Founder</span></div></footer></body></html>
+<p>I'm Peter Idah. I've spent more than twenty years building software and production infrastructure, including in regulated financial services. I'm currently doing this work at a leading London hedge fund. Agentic Founder helps organisations integrate specialist GPU compute into their existing cloud, identity, security, data and operational environments.</p>
+<p>We start with a bounded integration assessment: one real workload, the blockers between you and production, the decisions that need making and a defined route to deployment. If the scope is already clear, we can move straight to implementation.</p>
+<p><a class="action" href="mailto:peter@theagenticfounder.com?subject=Specialist%20GPU%20integration&body=Our%20workload%3A%0D%0A%0D%0AOur%20existing%20environment%3A%0D%0A%0D%0AThe%20provider%20we%20are%20considering%3A%0D%0A%0D%0AWhat%20is%20blocking%20production%3A%0D%0A">Tell me what you're trying to deploy &#8599;</a></p><small>A direct conversation about your workload and the integration work. No generic AI transformation pitch.</small></div>
+
+<p class="sources"><strong>Sources and further reading.</strong> <a href="https://shopify.engineering/skypilot">Shopify Engineering: SkyPilot at Shopify</a> (Jan 2026). CoreWeave blog: <a href="https://www.coreweave.com/blog/bringing-enterprise-identity-and-key-control-to-ai-on-coreweave">Enterprise Identity and Key Control</a>, <a href="https://www.coreweave.com/blog/coreweave-announces-new-capabilities-to-simplify-cross-cloud-ai">Cross-Cloud AI Capabilities</a>, <a href="https://www.coreweave.com/blog/how-coreweave-builds-security-into-the-architecture-that-powers-modern-ai">Security Architecture</a> (Sept 2026). <a href="https://docs.skypilot.ai/">SkyPilot documentation</a>. <a href="https://kueue.sigs.k8s.io/">Kueue documentation</a>. <a href="https://aws.amazon.com/sagemaker/hyperpod/">AWS SageMaker HyperPod</a>. <a href="https://docs.nebius.com/">Nebius documentation</a>. Practitioner discussions on Hacker News regarding multi-cloud GPU infrastructure, data gravity and operational challenges. Verify provider features and terms for your region and contract.</p>
+
+</article></main><footer><div class="wrap footer-inner"><a href="/">Agentic Founder</a><span>Neocloud integration · UK</span><span>© 2026 Agentic Founder</span></div></footer></body></html>
