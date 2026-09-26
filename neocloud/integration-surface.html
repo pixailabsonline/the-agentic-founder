@@ -67,7 +67,7 @@ Reproducibility infrastructure      (pinned images, versioned data, seed managem
 Secrets management                  (Vault, cloud KMS, or provider-managed option)
 Incident response and on-call       (your runbooks, your people)</div>
 
-<p>The provider manages infrastructure up to an API boundary. Everything above that, who can access the GPUs, how data gets there, how costs are tracked, how failures are handled, falls to you. The shared-responsibility band in the middle varies by provider, service and contract. Some offer substantial managed identity, networking, scheduling and recovery. Others leave more to the customer. Your job is to work out what your chosen provider actually supplies, what has to connect to your existing estate and who owns each failure mode.</p>
+<p>Where the provider's responsibility ends depends on the service and contract you buy. In general, the provider manages infrastructure up to an API boundary. Everything above that, who can access the GPUs, how data gets there, how costs are tracked, how failures are handled, falls to you. The shared-responsibility band in the middle varies by provider, service and contract. Some offer substantial managed identity, networking, scheduling and recovery. Others leave more to the customer. Your job is to work out what your chosen provider actually supplies, what has to connect to your existing estate and who owns each failure mode.</p>
 
 <h2>The first wall: your identity system stops at the new cloud.</h2>
 
@@ -103,7 +103,7 @@ Incident response and on-call       (your runbooks, your people)</div>
 
 <p>Identity gets researchers through the door. Then the first real workload needs its training data. Several terabytes, probably, sitting in your existing cloud.</p>
 
-<p>Shopify's published SkyPilot architecture is the best public example of solving this at scale, and it uses Nebius alongside Google Cloud. Training datasets are replicated near the compute. When a run targets Nebius, data comes from Nebius storage. When it targets GCP, from GCS. They designed for data locality rather than cross-cloud reads.</p>
+<p>Shopify's published SkyPilot architecture is a well-documented production example of solving this at scale, and it uses Nebius alongside Google Cloud. Training datasets are replicated near the compute. When a run targets Nebius, data comes from Nebius storage. When it targets GCP, from GCS. They designed for data locality rather than cross-cloud reads.</p>
 
 <p class="source-note">Source: Shopify Engineering, "SkyPilot at Shopify: Multi-cloud GPUs without the pain", January 2026.</p>
 
