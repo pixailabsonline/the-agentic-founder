@@ -14,6 +14,22 @@
 
 <p>This article maps that surface. I'm currently involved in this kind of integration work and I've structured it as a narrative because that's how it actually unfolds: each problem reveals the next, and the decisions you make early constrain what's possible later.</p>
 
+<h2>The GPU deal isn't the business outcome. A productive workload is.</h2>
+
+<p>Specialist GPU providers can offer better pricing, more capacity, newer hardware and geographic choice. For the right workload, the economics are compelling. But the number on the rate card is not the number your business experiences.</p>
+
+<p>Imagine committing to a cluster because it promises substantial savings. The contract starts. The GPUs are ready. Then the work begins.</p>
+
+<p>Security needs to approve the network path. Engineers must federate your identity provider. Training data needs a secure route into the environment. Monitoring is incomplete. Nobody has agreed who takes the call when a job fails at 2am.</p>
+
+<p>Meanwhile, you're paying for capacity your researchers cannot fully use.</p>
+
+<p><strong>The provider has delivered what it sold. Your business hasn't yet realised what it bought.</strong></p>
+
+<p>The right calculation isn't cost per GPU-hour. It's cost per useful, completed workload — including data movement, integration engineering, utilisation losses and ongoing operations. Before committing, establish a baseline for the workload, the integration work required, a realistic time to production and the cost of capacity that sits idle while your team gets there.</p>
+
+<p>Here is why. The integration surface between a specialist GPU provider and your existing enterprise is wider than most organisations expect:</p>
+
 <div class="diagram" role="group" aria-label="Enterprise integration boundary"><strong>PROVIDER SIDE</strong>                    <strong>BOUNDARY</strong>                        <strong>CUSTOMER SIDE</strong>
 
 Physical GPUs, networking,          &lt;&gt;  Provider API / Kubernetes API   Your existing cloud estate
@@ -41,31 +57,17 @@ Storage, backup and data residency · Capacity commitments · Workload recovery
 
 ————————————————————————————————————————————————————————
 
-<strong>WHOLLY CUSTOMER-OWNED (provider has no visibility or responsibility)</strong>
+<strong>TYPICALLY CUSTOMER-OWNED (some providers offer managed options — verify for your service)</strong>
 
 Cross-provider workload routing     (SkyPilot, custom platform, or manual)
-Quota, admission, scheduling        (Kueue per cluster, or equivalent)
+Quota, admission, scheduling        (Kueue per cluster, or provider-managed equivalent)
 Distributed runtimes                (Ray, PyTorch Distributed, DeepSpeed)
 Experiment tracking                 (W&amp;B, MLflow, Neptune)
 Reproducibility infrastructure      (pinned images, versioned data, seed management)
-Secrets management                  (Vault, cloud KMS, or equivalent)
+Secrets management                  (Vault, cloud KMS, or provider-managed option)
 Incident response and on-call       (your runbooks, your people)</div>
 
-<p>The provider manages infrastructure up to an API boundary. What sits above it — who can access the GPUs, how data gets there, how costs are tracked, how failures are handled — is customer-side work. The shared-responsibility band varies by provider, service and contract: some offer substantial managed identity, networking and recovery; others leave more to the customer. Your task is to establish what your chosen provider supplies, what must connect to your existing estate and who owns each failure mode.</p>
-
-<h2>The GPU deal isn't the business outcome. A productive workload is.</h2>
-
-<p>Specialist GPU providers can offer better pricing, more capacity, newer hardware and geographic choice. For the right workload, the economics are compelling. But the number on the rate card is not the number your business experiences.</p>
-
-<p>Imagine committing to a cluster because it promises substantial savings. The contract starts. The GPUs are ready. Then the work begins.</p>
-
-<p>Security needs to approve the network path. Engineers must federate your identity provider. Training data needs a secure route into the environment. Monitoring is incomplete. Nobody has agreed who takes the call when a job fails at 2am.</p>
-
-<p>Meanwhile, you're paying for capacity your researchers cannot fully use.</p>
-
-<p><strong>The provider has delivered what it sold. Your business hasn't yet realised what it bought.</strong></p>
-
-<p>The right calculation isn't cost per GPU-hour. It's cost per useful, completed workload — including data movement, integration engineering, utilisation losses and ongoing operations. Before committing, establish a baseline for the workload, the integration work required, a realistic time to production and the cost of capacity that sits idle while your team gets there.</p>
+<p>The provider manages infrastructure up to an API boundary. What sits above it — who can access the GPUs, how data gets there, how costs are tracked, how failures are handled — is customer-side work. The shared-responsibility band varies by provider, service and contract: some offer substantial managed identity, networking, scheduling and recovery; others leave more to the customer. Your task is to establish what your chosen provider supplies, what must connect to your existing estate and who owns each failure mode.</p>
 
 <h2>The first wall: your identity system stops at the new cloud.</h2>
 
@@ -170,7 +172,7 @@ Incident response and on-call       (your runbooks, your people)</div>
 
 <h2>Then finance asks a question your monitoring dashboard can't answer.</h2>
 
-<p>Researchers are running jobs. Utilisation is rising. Finance asks which team consumed the capacity and whether the new provider is delivering the expected savings.</p>
+<p>You built the business case on better economics. Now you need to prove it. Researchers are running jobs. Utilisation is rising. Finance asks which team consumed the capacity and whether the new provider is delivering the expected savings.</p>
 
 <p>The provider has billing data. Kubernetes shows resource usage. Your experiment tracker knows which jobs ran. Those systems may not agree on the cost of a completed experiment.</p>
 
@@ -189,7 +191,9 @@ Incident response and on-call       (your runbooks, your people)</div>
 
 <h2>The first serious failure reveals whether you have a platform.</h2>
 
-<p>A long training job fails overnight. Is it a GPU fault, an interrupted data path, exhausted storage or a provider incident? Can the job resume from a checkpoint? Is that checkpoint accessible in the recovery environment? Can the on-call engineer tell which organisation owns the next action?</p>
+<p>Your CTO approved the investment. Your researchers are productive. Then a long training job fails overnight. The business case assumed reliable compute — now you discover whether you've built a production platform or an impressive demonstration.</p>
+
+<p>Is it a GPU fault, an interrupted data path, exhausted storage or a provider incident? Can the job resume from a checkpoint? Is that checkpoint accessible in the recovery environment? Can the on-call engineer tell which organisation owns the next action?</p>
 
 <p>Provider-side resilience is improving. Managed recovery features, node replacement and checkpoint storage options vary by provider and service level. Don't compare benchmarked goodput figures across providers without controlling for workload, cluster size and failure type. Ask each provider how the exact service you are buying handles node failures, checkpoint storage, capacity replacement and escalation. Test recovery with your own workload.</p>
 
@@ -209,13 +213,13 @@ Incident response and on-call       (your runbooks, your people)</div>
 <p>Day-two operations extend well beyond failure recovery. GPU driver and CUDA version compatibility, certificate rotation, VPN tunnel maintenance, node pool management, provider API changes, abandoned storage cleanup, monitoring integration — each is a recurring maintenance task your team inherits. Provider dashboards are valuable, but your team needs a joined-up picture of application, scheduler, GPU, storage, network and identity across both environments.</p>
 
 <div class="mid-cta">
-<p><strong>The pattern we see repeatedly:</strong> teams that invest heavily in getting the first workload running, then discover they've built nothing reusable for the second. If you're approaching your first specialist GPU integration and want to get the foundations right, a conversation about scope and sequence costs nothing.</p>
+<p><strong>A common pattern in this work:</strong> teams invest heavily in getting the first workload running, then discover they've built nothing reusable for the second. If you're approaching your first specialist GPU integration and want to get the foundations right, a conversation about scope and sequence costs nothing.</p>
 <p><a href="mailto:peter@theagenticfounder.com?subject=GPU%20integration%20—%20scoping%20conversation">Describe your workload to Peter &#8594;</a></p>
 </div>
 
 <h2>Six months later, someone needs to reproduce a result.</h2>
 
-<p>The code and model weights exist. But which dataset version, container image, CUDA and PyTorch versions, GPU type and distributed configuration produced the result? Was the job resumed from a checkpoint? Where are the audit records?</p>
+<p>A research finding is challenged. A regulator asks how a model was trained. A team wants to build on earlier work. The code and model weights exist. But which dataset version, container image, CUDA and PyTorch versions, GPU type and distributed configuration produced the result? Was the job resumed from a checkpoint? Where are the audit records?</p>
 
 <p>Reproducibility across environments means:</p>
 
@@ -227,7 +231,7 @@ Incident response and on-call       (your runbooks, your people)</div>
 <li><strong>Unified audit trails.</strong> Who launched what, when, where, with what access. The combination of provider audit logs and your own experiment tracking creates the full record.</li>
 </ul>
 
-<p>No provider solves reproducibility for you. It is entirely customer-side and gets harder, not easier, when you add a second compute environment.</p>
+<p>Experiment tracking products handle parts of this. But the full reproducibility problem — pinning every dependency, recording topology, versioning data, unifying audit trails across environments — remains largely customer-side work. It gets harder, not easier, when you add a second compute environment.</p>
 
 <h2>The second provider reveals what you really built.</h2>
 
@@ -247,7 +251,7 @@ Incident response and on-call       (your runbooks, your people)</div>
 
 <p><strong>Solved.</strong> Single-provider Kubernetes access. Identity federation to one provider — Nebius's SAML SSO, CoreWeave's SAML/OIDC with SCIM provisioning and Crusoe's enterprise identity are each available for their respective services. Basic VPN connectivity. Job scheduling within a cluster via Kueue. Single-provider cost tracking. SkyPilot for cross-provider job routing — Shopify runs it in production across Nebius and Google Cloud.</p>
 
-<p><strong>Partially solved.</strong> Cross-provider identity — you can federate to each provider separately, but no product unifies IAM across your existing cloud and multiple specialist providers. Cross-provider networking — private interconnect options exist for some cloud pairings but not all; coverage and performance vary by provider and region. Data movement at scale — provider-specific products and Shopify's Nebius replication pattern show the direction, but general availability differs. Unified observability across providers. Multi-cluster quota-aware scheduling via Kueue's MultiKueue.</p>
+<p><strong>Partially solved.</strong> Cross-provider identity — you can federate to each provider separately, but no widely adopted product yet unifies IAM across your existing cloud and multiple specialist providers. Cross-provider networking — private interconnect options exist for some cloud pairings but not all; coverage and performance vary by provider and region. Data movement at scale — provider-specific products and Shopify's Nebius replication pattern show the direction, but general availability differs. Unified observability across providers. Multi-cluster quota-aware scheduling via Kueue's MultiKueue.</p>
 
 <p><strong>Genuinely hard.</strong> Unified secrets management across three or more environments. Stateful workload migration with TB-scale checkpoints and topology-specific performance. Unified audit trails joining multiple providers with different log schemas and retention policies. Cross-provider capacity management that goes beyond spreadsheets. Full Kubernetes multi-cluster federation — despite years of community effort, it remains immature.</p>
 
